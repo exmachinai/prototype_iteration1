@@ -1,81 +1,1925 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>VerifyWise Audit Wiki · Sofort-Start</title>
-<meta http-equiv="refresh" content="0; url=../02_Wiki/index.html">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AEGIRA — AI Governance Platform</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.12.3/d3-sankey.min.js"></script>
 <style>
-  :root{
-    --primary:#1E2761; --primary-dark:#0B143E; --accent:#E6B32F;
-    --body:#4D556B; --rule:#D6DAE6; --bg:#F7F8FB; --surface:#fff;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-    background:var(--bg); color:var(--body);
-    min-height:100vh; display:flex; align-items:center; justify-content:center;
-    padding:24px;
-  }
-  .launcher{
-    background:var(--surface); border:1px solid var(--rule);
-    border-radius:12px; padding:40px 48px; max-width:560px;
-    box-shadow:0 4px 20px rgba(30,39,97,.08);
-    text-align:center;
-  }
-  h1{
-    color:var(--primary); font-size:22px; font-weight:600;
-    margin-bottom:8px; letter-spacing:.2px;
-  }
-  .subtitle{
-    font-size:13px; color:var(--body); opacity:.75;
-    margin-bottom:24px;
-  }
-  .pill-row{
-    display:flex; gap:6px; justify-content:center; flex-wrap:wrap;
-    margin-bottom:28px;
-  }
-  .pill{
-    background:var(--accent); color:var(--primary-dark);
-    padding:4px 12px; border-radius:14px;
-    font-size:11px; font-weight:600; letter-spacing:.5px;
-    text-transform:uppercase;
-  }
-  .pill.muted{ background:#f1f2f8; color:var(--primary); }
-  .cta{
-    display:inline-block; background:var(--primary); color:#fff;
-    padding:12px 32px; border-radius:8px;
-    text-decoration:none; font-weight:600; font-size:14px;
-    transition:all .15s;
-  }
-  .cta:hover{ background:var(--primary-dark); transform:translateY(-1px); }
-  .hint{
-    font-size:11px; color:var(--body); opacity:.6;
-    margin-top:18px; line-height:1.5;
-  }
-  .loader{
-    margin: 18px auto 0; width: 28px; height: 28px;
-    border: 2px solid var(--rule); border-top-color: var(--accent);
-    border-radius: 50%; animation: spin .8s linear infinite;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
+/* ═══════════════════════════════════════════ */
+/* AEGIRA Design System                        */
+/* ═══════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root {
+  --navy:#172238;--steel:#50617D;--slate:#6B7B8D;
+  --accent:#2A6496;--green:#3D8B6E;--amber:#E6A817;--red:#C62828;--orange:#E65100;
+  --surface1:#172238;--surface2:#0E1A2B;--surface3:#1A2D44;
+  --text1:#FFFFFF;--text2:#E8EDF2;--text3:#6B7B8D;
+  --font:'Segoe UI',Calibri,sans-serif;
+  --mono:'Cascadia Code','Fira Code',monospace;
+  --sidebar-w:240px;--topbar-h:52px;
+  --radius:8px;--radius-sm:4px;
+  --transition:all .3s ease;
+}
+[data-theme="light"] {
+  --surface1:#F5F7FA;--surface2:#FFFFFF;--surface3:#E8EDF2;
+  --text1:#172238;--text2:#50617D;--text3:#6B7B8D;
+}
+html,body{height:100%;font-family:var(--font);background:var(--surface1);color:var(--text1);transition:var(--transition)}
+body{overflow:hidden}
+a{color:var(--accent);text-decoration:none}
+button{cursor:pointer;font-family:var(--font);border:none;outline:none}
+input{font-family:var(--font);outline:none}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--steel);border-radius:3px}
+
+/* Login */
+.login-bg{position:fixed;inset:0;background:#172238;display:flex;align-items:center;justify-content:center;z-index:9999}
+.login-card{background:#0E1A2B;border-radius:12px;padding:48px 40px;width:440px;max-width:90vw;text-align:center;
+  animation:slideUp .5s ease-out;box-shadow:0 24px 64px rgba(0,0,0,.4);color:#FFFFFF}
+.login-card h1,.login-card p{color:#E8EDF2}
+.login-card p{opacity:.7}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.login-card img.splash{height:200px;margin-bottom:24px;animation:logoFade .6s ease;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges;display:inline-block}
+@keyframes logoFade{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.login-card h1{font-size:20px;color:#FFFFFF;margin-bottom:8px;font-weight:600}
+.login-card p{font-size:13px;color:#6B7B8D;margin-bottom:28px}
+.sso-btn{width:100%;padding:14px;background:#2A6496;color:#fff;font-size:14px;font-weight:600;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;gap:10px;transition:all .3s ease;text-align:center}
+.sso-btn:hover{background:#1E4F7A;transform:translateY(-1px)}
+.mfa-grid{display:flex;gap:8px;justify-content:center;margin:24px 0}
+.mfa-input{width:44px;height:52px;background:#1A2D44;border:2px solid #50617D;border-radius:var(--radius);
+  color:#FFFFFF;font-size:22px;text-align:center;font-weight:700;transition:var(--transition)}
+.mfa-input.filled{border-color:var(--accent);background:#0E1A2B}
+.persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.persona-card{background:#1A2D44;border-radius:var(--radius);padding:20px 16px;cursor:pointer;transition:var(--transition);
+  border:2px solid transparent;text-align:left}
+.persona-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.persona-card .avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:18px;margin-bottom:8px;font-weight:700}
+.persona-card h3{font-size:13px;color:#FFFFFF;margin-bottom:2px}
+.persona-card span{font-size:11px;color:#6B7B8D}
+
+/* Layout */
+.app-layout{display:flex;height:100vh;overflow:hidden}
+.sidebar{width:var(--sidebar-w);background:var(--surface2);border-right:1px solid rgba(255,255,255,.06);
+  display:flex;flex-direction:column;transition:var(--transition);overflow-y:auto;flex-shrink:0;z-index:50}
+.sidebar.collapsed{width:56px}
+.sidebar-logo{padding:24px 16px;display:flex;align-items:flex-start;justify-content:flex-start;border-bottom:1px solid rgba(255,255,255,.06);background:#172238;border-radius:8px 8px 0 0}
+.sidebar-logo img{height:160px;width:auto;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges}
+.sidebar.collapsed .sidebar-logo img{height:40px}
+.sidebar.collapsed .nav-label,.sidebar.collapsed .nav-section{display:none}
+.nav-section{padding:8px 16px 4px;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-top:12px}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 16px;cursor:pointer;transition:var(--transition);
+  border-left:3px solid transparent;color:var(--text3);font-size:13px;white-space:nowrap}
+.nav-item:hover{background:var(--surface3);color:var(--text2)}
+.nav-item.active{border-left-color:var(--accent);color:var(--accent);background:rgba(42,100,150,.1)}
+.nav-icon{width:20px;text-align:center;flex-shrink:0;font-size:16px}
+
+.main-area{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.topbar{height:var(--topbar-h);background:var(--surface2);border-bottom:1px solid rgba(255,255,255,.06);
+  display:flex;align-items:center;padding:0 20px;gap:16px;flex-shrink:0}
+.topbar-breadcrumb{font-size:13px;color:var(--text3)}
+.topbar-spacer{flex:1}
+.topbar-btn{width:36px;height:36px;border-radius:var(--radius);background:transparent;color:var(--text3);
+  display:flex;align-items:center;justify-content:center;font-size:16px;transition:var(--transition);position:relative}
+.topbar-btn:hover{background:var(--surface3);color:var(--text1)}
+.topbar-badge{position:absolute;top:4px;right:4px;width:16px;height:16px;background:var(--red);color:#fff;
+  font-size:9px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+.persona-badge{display:flex;align-items:center;gap:8px;padding:6px 12px;background:var(--surface3);border-radius:20px;
+  font-size:12px;color:var(--text2);cursor:pointer}
+.persona-dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+
+.content{flex:1;overflow-y:auto;padding:24px;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* Cards */
+.card{background:var(--surface2);border-radius:var(--radius);padding:20px;transition:var(--transition);
+  border:1px solid rgba(255,255,255,.04)}
+.card:hover{box-shadow:0 4px 16px rgba(0,0,0,.15)}
+.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:600;color:var(--text1)}
+.card-subtitle{font-size:11px;color:var(--text3)}
+.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.badge-red{background:rgba(198,40,40,.15);color:#EF5350}
+.badge-orange{background:rgba(230,81,0,.15);color:#FF8A65}
+.badge-amber{background:rgba(230,168,23,.15);color:#FFD54F}
+.badge-green{background:rgba(61,139,110,.15);color:#66BB6A}
+.badge-blue{background:rgba(42,100,150,.15);color:#64B5F6}
+.badge-steel{background:rgba(80,97,125,.15);color:var(--steel)}
+
+/* Dashboard Grid */
+.dash-grid{display:grid;gap:20px}
+.dash-grid-2{grid-template-columns:1fr 1fr}
+.dash-grid-3{grid-template-columns:1fr 1fr 1fr}
+.dash-grid-4{grid-template-columns:1fr 1fr 1fr 1fr}
+.dash-grid-60-40{grid-template-columns:3fr 2fr}
+
+/* GMS Gauge */
+.gauge-container{position:relative;width:200px;height:200px;margin:0 auto}
+.gauge-svg{width:100%;height:100%}
+.gauge-value{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:42px;font-weight:700;color:var(--accent)}
+.gauge-label{text-align:center;font-size:12px;color:var(--text3);margin-top:-8px}
+
+/* Radar */
+.radar-container{position:relative;width:280px;height:280px;margin:0 auto}
+
+/* Table */
+.data-table{width:100%;border-collapse:collapse}
+.data-table th{text-align:left;font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;padding:10px 12px;
+  border-bottom:1px solid rgba(255,255,255,.08)}
+.data-table td{padding:10px 12px;font-size:13px;color:var(--text2);border-bottom:1px solid rgba(255,255,255,.04)}
+.data-table tr:hover td{background:var(--surface3)}
+
+/* Wizard */
+.wizard-steps{display:flex;align-items:center;gap:4px;margin-bottom:24px}
+.wizard-step{flex:1;text-align:center;padding:8px 4px;border-radius:var(--radius-sm);font-size:11px;color:var(--text3);
+  background:var(--surface3);transition:var(--transition);cursor:pointer}
+.wizard-step.active{background:var(--accent);color:#fff;font-weight:600}
+.wizard-step.done{background:var(--green);color:#fff}
+.wizard-step-arrow{color:var(--steel);font-size:14px;flex-shrink:0}
+
+/* CoPilot Panel */
+.copilot-overlay{position:fixed;right:0;top:0;bottom:0;width:380px;background:var(--surface2);
+  border-left:1px solid rgba(255,255,255,.08);z-index:200;display:flex;flex-direction:column;
+  transform:translateX(100%);transition:transform .3s ease;box-shadow:-8px 0 32px rgba(0,0,0,.3)}
+.copilot-overlay.open{transform:translateX(0)}
+.copilot-header{padding:16px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:10px}
+.copilot-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px}
+.copilot-bubble{max-width:85%;padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;animation:bubbleIn .3s ease}
+@keyframes bubbleIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.copilot-bubble.user{background:var(--accent);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.copilot-bubble.bot{background:var(--surface3);color:var(--text2);align-self:flex-start;border-bottom-left-radius:4px}
+.copilot-bubble .typing-cursor{display:inline-block;width:2px;height:14px;background:var(--accent);margin-left:2px;
+  animation:blink .6s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.copilot-input{padding:12px 16px;border-top:1px solid rgba(255,255,255,.06);display:flex;gap:8px}
+.copilot-input input{flex:1;background:var(--surface3);border:1px solid var(--steel);border-radius:var(--radius);padding:10px 14px;
+  color:var(--text1);font-size:13px}
+.copilot-input button{background:var(--accent);color:#fff;border-radius:var(--radius);padding:10px 16px;font-weight:600;font-size:13px}
+.copilot-suggestions{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px}
+.copilot-chip{padding:6px 12px;background:var(--surface3);border:1px solid var(--steel);border-radius:16px;
+  font-size:11px;color:var(--text2);cursor:pointer;transition:var(--transition)}
+.copilot-chip:hover{border-color:var(--accent);color:var(--accent)}
+
+/* Toast */
+.toast-container{position:fixed;top:60px;right:20px;z-index:500;display:flex;flex-direction:column;gap:8px}
+.toast{padding:14px 20px;border-radius:var(--radius);background:var(--surface2);border-left:4px solid var(--accent);
+  box-shadow:0 8px 32px rgba(0,0,0,.3);animation:toastIn .4s ease-out;max-width:380px;
+  display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text2)}
+.toast.warning{border-left-color:var(--amber)}
+.toast.error{border-left-color:var(--red)}
+.toast.info{border-left-color:var(--accent)}
+@keyframes toastIn{from{transform:translateX(120%);opacity:0}to{transform:translateX(0);opacity:1}}
+.toast-close{cursor:pointer;color:var(--text3);font-size:16px;margin-left:auto;flex-shrink:0}
+
+/* Tour Overlay */
+.tour-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:800}
+.tour-tooltip{position:fixed;background:var(--surface2);border-radius:var(--radius);padding:20px;max-width:320px;z-index:801;
+  box-shadow:0 16px 48px rgba(0,0,0,.4);border:1px solid var(--accent);animation:fadeIn .3s ease}
+.tour-tooltip h4{font-size:14px;color:var(--text1);margin-bottom:8px}
+.tour-tooltip p{font-size:12px;color:var(--text3);line-height:1.5;margin-bottom:16px}
+.tour-actions{display:flex;justify-content:space-between;align-items:center}
+.tour-btn{padding:8px 16px;border-radius:var(--radius-sm);font-size:12px;font-weight:600}
+.tour-btn-skip{background:transparent;color:var(--text3)}
+.tour-btn-next{background:var(--accent);color:#fff}
+.tour-dots{display:flex;gap:4px}
+.tour-dot{width:6px;height:6px;border-radius:50%;background:var(--steel)}
+.tour-dot.active{background:var(--accent)}
+
+/* Sankey */
+.sankey-container{width:100%;min-height:400px;position:relative}
+.sankey-container svg{width:100%;height:400px}
+.sankey-node rect{cursor:pointer;transition:opacity .2s}
+.sankey-node rect:hover{opacity:.8}
+.sankey-link{fill:none;stroke-opacity:.3}
+.sankey-link:hover{stroke-opacity:.6}
+
+/* Evidence Graph */
+.graph-container{display:flex;gap:0;height:500px;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.graph-svg{flex:1;background:var(--surface2)}
+.graph-detail{width:300px;background:var(--surface3);padding:20px;overflow-y:auto;border-left:1px solid rgba(255,255,255,.06)}
+.graph-node{cursor:pointer}
+.graph-node circle{transition:r .2s ease}
+
+/* Export Buttons */
+.export-btn{padding:8px 16px;border-radius:var(--radius-sm);font-size:12px;font-weight:600;
+  background:var(--surface3);color:var(--text2);display:inline-flex;align-items:center;gap:6px;transition:var(--transition)}
+.export-btn:hover{background:var(--accent);color:#fff}
+
+/* Posthoc Hint */
+.posthoc-hint{background:rgba(42,100,150,.1);border:1px solid rgba(42,100,150,.3);border-radius:var(--radius-sm);
+  padding:8px 14px;font-size:11px;color:var(--accent);display:flex;align-items:center;gap:8px;margin-top:12px}
+
+/* Responsive */
+@media(max-width:1023px){
+  .sidebar{position:fixed;left:0;top:0;bottom:0;z-index:100;transform:translateX(-100%)}
+  .sidebar.mobile-open{transform:translateX(0)}
+  .dash-grid-2,.dash-grid-60-40{grid-template-columns:1fr}
+  .copilot-overlay{width:100%}
+}
+@media(max-width:767px){
+  .content{padding:16px}
+  .persona-grid{grid-template-columns:1fr}
+  .dash-grid-3,.dash-grid-4{grid-template-columns:1fr 1fr}
+  .topbar{padding:0 12px}
+}
+
+/* Scrollbar for light mode */
+[data-theme="light"] ::-webkit-scrollbar-thumb{background:#C4C4C4}
+
+@media (max-width: 768px) {
+  .sidebar{position:fixed;left:-240px;z-index:100;height:100vh;transition:var(--transition)}
+  .sidebar.mobile-open{left:0}
+  .dash-grid-2,.dash-grid-3,.dash-grid-4,.dash-grid-60-40{grid-template-columns:1fr}
+  .content{padding:16px}
+  .topbar{padding:0 12px}
+  #menu-btn{display:flex!important}
+  .copilot-overlay{width:100%}
+  .graph-container{flex-direction:column}
+  .graph-svg{height:300px}
+  .graph-detail{width:100%;height:auto}
+}
+
+@keyframes shimmer{0%{background-position:-200px 0}100%{background-position:200px 0}}
+.skeleton{background:linear-gradient(90deg,var(--surface3) 25%,var(--surface2) 50%,var(--surface3) 75%);background-size:400px 100%;animation:shimmer 1.5s infinite;border-radius:var(--radius);height:20px;margin-bottom:8px}
+
+/* DIDACTIC INFO BANNERS & TOOLTIPS */
+.info-banner{background:linear-gradient(135deg,rgba(42,100,150,.12),rgba(42,100,150,.06));border:1px solid rgba(42,100,150,.2);border-radius:var(--radius);padding:14px 16px;margin-bottom:20px;display:flex;align-items:flex-start;gap:10px;font-size:12px;color:var(--text2);line-height:1.6}
+.info-banner .banner-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.info-banner .banner-close{cursor:pointer;margin-left:auto;font-size:14px;color:var(--text3);flex-shrink:0}
+.info-tip{position:relative;display:inline-flex;align-items:center;cursor:help}
+.info-tip .tip-icon{width:16px;height:16px;border-radius:50%;background:rgba(42,100,150,.15);color:var(--accent);font-size:10px;display:inline-flex;align-items:center;justify-content:center;margin-left:6px;font-weight:700}
+.info-tip .tip-text{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--surface2);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:10px 12px;font-size:11px;color:var(--text2);width:240px;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,.3);line-height:1.5;pointer-events:none}
+.info-tip:hover .tip-text{display:block}
+@keyframes flowDash{from{stroke-dashoffset:20}to{stroke-dashoffset:0}}
+.graph-link-animated{animation:flowDash 1.5s linear infinite}
+.usecase-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px}
+.usecase-card{background:var(--surface3);border-radius:var(--radius);padding:14px;cursor:pointer;transition:var(--transition);border:1px solid transparent}
+.usecase-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.usecase-card h4{font-size:12px;color:var(--text1);margin-bottom:4px}
+.usecase-card p{font-size:11px;color:var(--text3);line-height:1.4}
+.kanban-board{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kanban-col{background:var(--surface3);border-radius:var(--radius);padding:12px;min-height:200px}
+.kanban-col-header{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid}
+.kanban-card{background:var(--surface2);border-radius:6px;padding:10px;margin-bottom:8px;font-size:12px;border-left:3px solid}
+.kanban-card .k-title{color:var(--text1);font-weight:600;margin-bottom:4px}
+.kanban-card .k-meta{color:var(--text3);font-size:10px}
+.view-toggle{display:inline-flex;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+.view-toggle button{padding:6px 14px;font-size:11px;font-weight:600;background:transparent;color:var(--text3);border:none;cursor:pointer;transition:var(--transition)}
+.view-toggle button.active{background:var(--accent);color:#fff}
+.timeline-item{position:relative;padding-left:32px;padding-bottom:16px;border-left:2px solid rgba(255,255,255,.08);margin-left:8px}
+.timeline-item:last-child{border-left-color:transparent}
+.timeline-dot{position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;border:2px solid var(--surface1)}
+.timeline-date{font-size:10px;color:var(--text3);margin-bottom:4px;font-weight:600}
+.timeline-content{background:var(--surface3);border-radius:var(--radius);padding:12px}
+.timeline-content h4{font-size:13px;color:var(--text1);margin-bottom:2px}
+.timeline-content p{font-size:11px;color:var(--text3);margin:0}
+.timeline-filter{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.timeline-filter button{padding:4px 10px;font-size:10px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:transparent;color:var(--text3);cursor:pointer;transition:var(--transition)}
+.timeline-filter button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 </style>
 </head>
-<body>
-  <div class="launcher">
-    <h1>VerifyWise Audit Wiki</h1>
-    <div class="subtitle">Konsolidiertes Single-File Briefing</div>
-    <div class="pill-row">
-      <span class="pill">v04-consolidated</span>
-      <span class="pill muted">TABLETOP-3-GO</span>
-      <span class="pill muted">2026-04-26</span>
+<body data-theme="dark">
+<div id="root"></div>
+<script type="text/babel">
+const {useState,useEffect,useRef,useCallback,createContext,useContext,useMemo} = React;
+
+/* ═══════════════════════════════════════════ */
+/* LOGO DATA                                   */
+/* ═══════════════════════════════════════════ */
+const LOGO_HEADER_SW = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAEY0lEQVR4nO2XT2gcVRzHf2/37exms7s1201K1ig1SUGTFK0WWnKwGPHSCuphvQoqGvCUg6J4WAsiigj2YKGnoujBYA6CBPSyCWKgIUqC22pp0u1umz87u7MzOzM7szPvzfw8dKbmIihubLbO5zLMvD/8vu/37w1AQEBAQEDA/x6CiBQRQ3fbkP8cRCR324Y9AxGJ51Wiquqroige8b7fm55GRAoAoDW1DxARbdu+XCgUYogY9j2dz+fvDfGIGAYAaDQapzh3XERkiIitVut9f/ye8bQfyhsbGwds2y4hIhqGedNxHMa5Y0qSNOEfyPXr1x8tl8vHvXXdeQB+KJum+RUiImNcrVQqRy2LLSIittvtNQAAWZaPaZq2iIhp75C6r6AVCrfFNpvNl9BDVdVXAADkmjxlWdYPsiw/rWnaFGOcqar6PMCfKdBV+CFZrVZHGWNNRETTNL/xxmL+vFbLnOacc13XX/bGulIsQUSay+XC7Xb7p9tVmW3fuHFj0A/VarU6YlnsR9u2NUVRPlEU5TVvbffl7p0WpGln/VBuNJpnAABWVlbirVbrPattybZtf3nr1q0XGeMKIqIkSZPe+u7xsm9svV4/4YvVdePtYrEoqKo6bZrmomVZs/V6/SQAwPb2dq9lWd97UXAZAEJdU7R8Q2u1Wta2bYlzXq/XG++Uy+VnFEX5WNf1txRFGd01nwIA5PN52mq1PuScM13Xz3v77H8vez8FpFaTXjdN6+zy8vLw3NzcUKlUemR2dja8a17YF5TP50N+3u7s7Aw3Go03NjY2DiBiaF97eS+M6/SetJObEUKwWq2O1mq1yvj4OFtfXx/KZDL9pmmSbDb7S6lUivb19Z1yXXcrnU7/euXKlcFEIqHE4/EIADzsui5fWFhYGx4eDlFKhUOHDg0QQkqISAgh2AkbOyIYEUOEEFcUxcGenp5vh4aGzhNCPpMk6U1CyAOO46wVCoWrmUzmnOM4P7ucH8/n85ez2ewMY+xrEg4fiwnCCUQ0T58+vZlIJD6SZfldSulziqJMEULkTonuVL8jxWJRiMfj5yilq4IQna7X6/eHQ2EEAM45F0dGRgRCQocNw7gU7el5cmZm5nDoNoLDWIoxRhHxiOu6V0VRfDwWiz1LKb0WCUc+9XK9I7b+6/zwT75SqaSj0ehTAwMD87IsP2EYRisUCtFUKvWYbdt2Op3+XNO0o4SQM67r1pLJ5BdbW1snCSG/W5Y7hGg3kslkxjCMNqX0vlQq1UwkEtdqtcYLorj93cTEhN4JwXsB2fW8U5VXV1d7c7ncnfdisSgAAMyfm4/urt7z8/PRCxcuRAAALl68GAPo7M2rYx5eWlpKR0jkZOlmaW1sbMwURfEhx3EG0+m0iYi6JEkHotFoWBDiNBajbc653dvbGzEMw9R1Pem67m/9/f3q5uZm9uDBgw9KkmTG4/GoIAgWIl6anJw0OyF4/0L2b/v9R/ydvrqvLxsBAQEBAQEBAQF/wR+JAfL4iy8feQAAAABJRU5ErkJggg==";
+const LOGO_SPLASH_SW = "data:image/png;base64,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";
+const LOGO_HEADER_F = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAADo0lEQVR4nO2VX2hbVRzHv+fcc/8kS7qtGY2paZuSpKnZGiydbZGuFzdrcVPG0Isgg+1FUZ8UhepTmgeHrAwRpCgTn8Q/dA4flCG6sqDooOqGrMja4ehMYW03Y7s0yc295x4famWIaNLq6uR+3s4fzvmc3/md3wFcXFxcbjvIRgvctqxGjv6h/R/AMCQAaOkYfDOS2vv5zX0QYoNFfxMJJ3YNtqQeEtEuQ0Q69h0CAF1Ps/UuT/9+yl9CMJYUsVh3nSDsDYdbnFvlEmXasfZ7HmvLZjP28yMfNrx07MR9AJBOp2veb32Cui4BGeeGQ1+hkhYh3H6dCOsFWdECpdJy8sUjJwNmsXTctpEDBBkeHha3UNCQkM3aoVjXA4RKTzn28jWm0CPN9cG3F3LfN/XuefDi1aXrpyucvzsy9Oi0YYxRQkjNgmuFAGkai3XXNUR2XgrF+0W4re+Z1cGBx9OH9z9xdGq3MTQKAHp67bm4xhemMyBrN0Q6RynzPC24dWru8sTeu3oe6fH66jOa1+u9djW3RNmm+z0edei78eOv6brOstmsfQsEDQkY4w2Ru/cTonwEiJ82+X2HmeLfxWR1O5HUk5NfvvN+6/aBh1X/tlHNuzksy/aOiU/fmkQ6TZHJOP+mIAUgwtHOqGmJzyiTv/X7tPcY22I6VMxNffPxBLDyWjOZjNPc0bc1EGh/jlAElYD/2cFknZmpUbBWCADSFOuKNrd1t/7ZBGOlLpLfCzWA3l7Do+uHNGzA7yK1tOgaACSTSSWZNJSbB3VdX3ehrvZEBICAYUhNF+ZeVagYMcuWKqnak4Tz0xYlPzJK9kmELoKyT8rFYo+iKleEgwMgKM8Y/UcjJ7IDwsHOmR/OvIyVVKnqqqusgwYFgMjkwkFKWV2F4yChNEQIiTMGwYC4wwXlnLfyihkVRNzhWHYAwDY4ztbmD8aDjiMOgKAt0t6nr8hV96vUlBPheO+duemzs607eoKLZVHSJBZiQqpcmfricjjR3yGEQ2an9lyoj53yqcvcllpkocz7FCCPRVl1rl/8qhCO727MTY/PYvVW/kFB0tl5b4jzwqJt25Ys+xsZs80l26Y+zxaPUzJLpmk5QmUqrVSEpYripfPn86lUqt4kHq8GYlFK2LlzX8/UEpRaklhwXlhMJBLl+fl5ks/nFywL8ABQYf5cFH5KaYUsecxf6gWnVqFoA3BkWc7LsAuWZZEbwUYbVUbOxcXFxcXFxeX/wa9Tg1noMFZl0QAAAABJRU5ErkJggg==";
+
+/* ═══════════════════════════════════════════ */
+/* DATA                                        */
+/* ═══════════════════════════════════════════ */
+const PERSONAS = [
+  {id:"executive",name:"Dr. Elena Richter",role:"Chief AI Officer",color:"#2A6496",icon:"E",
+    desc:"GMS-Steuerung & Board-Reporting"},
+  {id:"compliance",name:"Thomas Weber",role:"Compliance Manager",color:"#3D8B6E",icon:"T",
+    desc:"EU AI Act & Regulatory Compliance"},
+  {id:"technical",name:"Sarah Kim",role:"ML Engineer",color:"#E6A817",icon:"S",
+    desc:"Policy Gates & CI/CD-Integration"},
+  {id:"auditor",name:"Prof. Dr. M. Scholz",role:"Externer Auditor",color:"#6B7B8D",icon:"M",
+    desc:"Evidence-Prüfung & Audit-Reports"}
+];
+
+const NAV_ITEMS = {
+  executive: [
+    {id:"dashboard",icon:"📊",label:"Dashboard"},
+    {id:"gms",icon:"📈",label:"GMS Detail"},
+    {id:"registry",icon:"📋",label:"AI Registry"},
+    {id:"evidence",icon:"🕸",label:"Evidence Graph"},
+    {id:"report",icon:"📑",label:"Board Report"},
+  ],
+  compliance: [
+    {id:"dashboard",icon:"📊",label:"Dashboard"},
+    {id:"checker",icon:"⚖",label:"Compliance Checker"},
+    {id:"registry",icon:"📋",label:"AI Registry"},
+    {id:"hierarchy",icon:"🔍",label:"Reg. Hierarchy"},
+    {id:"evidence",icon:"🕸",label:"Evidence Graph"},
+    {id:"audit",icon:"📝",label:"Audit Trail"},
+    {id:"itsm",icon:"🚨",label:"ITSM Incidents"},
+  ],
+  technical: [
+    {id:"dashboard",icon:"📊",label:"Dashboard"},
+    {id:"registry",icon:"📋",label:"AI Registry"},
+    {id:"policy",icon:"🔍",label:"Policy Explorer"},
+    {id:"gates",icon:"🚪",label:"Gate-Historie"},
+    {id:"evidence",icon:"🕸",label:"Evidence Graph"},
+    {id:"audit",icon:"📝",label:"Audit Trail"},
+    {id:"itsm",icon:"🚨",label:"ITSM Incidents"},
+  ],
+  auditor: [
+    {id:"dashboard",icon:"📊",label:"Audit-Dashboard"},
+    {id:"registry",icon:"📋",label:"AI Registry 🔒"},
+    {id:"evidence",icon:"🕸",label:"Evidence Graph 🔒"},
+    {id:"checker",icon:"⚖",label:"Compliance 🔒"},
+    {id:"itsm",icon:"🚨",label:"ITSM Incidents 🔒"},
+    {id:"export",icon:"📤",label:"Audit-Export"},
+  ]
+};
+
+const MODELS = [
+  {name:"KreditScore-LLM",ver:"v2.3",risk:"Hochrisiko",riskSub:"Annex III",dept:"Kreditabteilung",status:"warning",statusText:"Überprüfung fällig",gms:62},
+  {name:"AML-Detector",ver:"v1.8",risk:"Hochrisiko",riskSub:"Annex III",dept:"Compliance",status:"warning",statusText:"Bias-Drift",gms:71},
+  {name:"Kunden-Chatbot",ver:"v3.1",risk:"Limited Risk",riskSub:"Art. 50",dept:"Kundenservice",status:"warning",statusText:"Transparenz fehlt",gms:78},
+  {name:"Fraud-Detection",ver:"v4.0",risk:"Hochrisiko",riskSub:"Annex III",dept:"Risk Management",status:"ok",statusText:"Konform",gms:85},
+  {name:"Portfolio-Optimizer",ver:"v1.2",risk:"Minimal Risk",riskSub:"—",dept:"Asset Management",status:"ok",statusText:"Konform",gms:90},
+  {name:"HR-CV-Screener",ver:"v2.0",risk:"Hochrisiko",riskSub:"Annex III",dept:"Personal",status:"pending",statusText:"Klassifizierung läuft",gms:55},
+  {name:"Document-OCR",ver:"v5.1",risk:"Minimal Risk",riskSub:"—",dept:"Operations",status:"ok",statusText:"Konform",gms:92},
+  {name:"Sentiment-Analyzer",ver:"v1.5",risk:"Minimal Risk",riskSub:"—",dept:"Marketing",status:"ok",statusText:"Konform",gms:88},
+  {name:"Loan-Default-Predictor",ver:"v3.2",risk:"Hochrisiko",riskSub:"Annex III",dept:"Kreditabteilung",status:"ok",statusText:"Konform",gms:80},
+  {name:"Email-Classifier",ver:"v2.1",risk:"Minimal Risk",riskSub:"—",dept:"IT",status:"ok",statusText:"Konform",gms:94},
+  {name:"Risk-Aggregator",ver:"v1.0",risk:"Limited Risk",riskSub:"Art. 50",dept:"Risk Management",status:"pending",statusText:"Klassifizierung läuft",gms:72},
+  {name:"Robo-Advisor",ver:"v2.5",risk:"Limited Risk",riskSub:"Art. 50",dept:"Wealth Management",status:"ok",statusText:"Konform",gms:83}
+];
+
+const GMS_HISTORY = [
+  {month:"Okt 25",score:68},{month:"Nov 25",score:71},{month:"Dez 25",score:76},
+  {month:"Jan 26",score:78},{month:"Feb 26",score:75},{month:"Mär 26",score:72}
+];
+
+const GMS_COMPONENTS = [
+  {name:"Compliance Coverage",value:81,desc:"Abdeckung regulatorischer Anforderungen"},
+  {name:"Audit Readiness",value:68,desc:"Nachweisbereitschaft für externe Prüfung"},
+  {name:"Risk Mitigation",value:75,desc:"Wirksamkeit der Risikominderung"},
+  {name:"Operational Maturity",value:64,desc:"Prozessreife im KI-Betrieb"}
+];
+
+const COPILOT_RESPONSES = {
+  executive: {
+    q:"Warum ist unser GMS gefallen?",
+    a:`Der GMS fiel von 78 auf 72 (−6 Punkte).\n\n**Hauptursache:** audit_readiness sank um 14 Punkte.\n\n**Betroffenes Modell:** KreditScore-LLM v2.3\n**Grund:** Konformitätsbewertung abgelaufen (Fälligkeitsdatum: 15.02.2026)\n\n📋 **Empfehlung:** Konformitätsbewertung priorisieren → projizierter GMS: 82`
+  },
+  compliance: {
+    q:"Welche Art. 9 Pflichten fehlen noch?",
+    a:`Für **KreditScore-LLM v2.3** (Hochrisiko, Annex III) fehlen 2 von 6 Art. 9 Sub-Anforderungen:\n\n⚠️ **Art. 9(2)(b):** Verbleibende Risiken → Kein Evidence-Artefakt\n⚠️ **Art. 9(4):** Testmaßnahmen → Report veraltet (>90 Tage)\n\n✅ Art. 9(1): Risk Management System\n✅ Art. 9(2)(a): Bekannte Risiken identifiziert\n✅ Art. 9(3): 6 von 8 mitigiert\n✅ Art. 9(7): Manipulation-Test bestanden`
+  },
+  technical: {
+    q:"Warum hat der AML-Detector das Gate nicht bestanden?",
+    a:`**Gate FAIL** für AML-Detector v1.9:\n\n❌ **Policy:** agp.bias.max_disparity\n**Wert:** 0.18 (Schwellwert: 0.10)\n**Betroffene Gruppe:** Altersgruppe 55+\n\n**Root Cause:** Unterrepräsentation in Trainingskohorte (4.2% statt 15%)\n\n🔧 **Empfehlung:** Trainingsset rebalancieren, Re-Training mit augmentierten Daten`
+  },
+  auditor: {
+    q:"Ist die Evidence-Kette für KreditScore-LLM vollständig?",
+    a:`**Evidence-Completeness für KreditScore-LLM v2.3:** 78%\n\n✅ Modell-Dokumentation (Art. 11)\n✅ Risikobewertung (Art. 9)\n✅ Trainings-Datensatz-Beschreibung (Art. 10)\n⚠️ Konformitätsbewertung — **abgelaufen**\n❌ Post-Market-Monitoring-Plan (Art. 61) — **fehlt**\n✅ Human-Oversight-Protokoll (Art. 14)\n\n📋 2 Artefakte ausstehend für vollständige Prüfung.`
+  }
+};
+
+const TOAST_MESSAGES = {
+  executive: {delay:8000,type:"warning",text:"⚠️ KreditScore-LLM: Konformitätsbewertung überfällig (15 Tage)"},
+  compliance: {delay:12000,type:"info",text:"🔔 Neues BSI AIC4-Update verfügbar — 3 Controls betroffen"},
+  technical: {delay:10000,type:"error",text:"❌ Gate FAIL: AML-Detector v1.9 — Policy agp.bias.max_disparity verletzt"},
+  auditor: {delay:10000,type:"info",text:"📋 Evidence-Paket für KreditScore-LLM aktualisiert (3 neue Artefakte)"}
+};
+
+const CHECKER_STEPS = [
+  "Zweck & Kontext","Verbotene Praxis?","Annex I?","Annex III?","Art.6(3)?","Transparenz?","Ergebnis"
+];
+
+const TOUR_STEPS = {
+  executive: [
+    {target:"gms-gauge",title:"Governance Maturity Score",text:"Ihr GMS zeigt den KI-Reifegrad Ihres Unternehmens auf einen Blick. Aktuell: 72/100."},
+    {target:"portfolio-heat",title:"KI-Portfolio",text:"Alle 12 KI-Systeme im Überblick. Rot = kritisch, Grün = konform."},
+    {target:"copilot-btn",title:"AGP CoPilot",text:"Stellen Sie Governance-Fragen in natürlicher Sprache. Der CoPilot analysiert Ihre Daten."},
+    {target:"notif-btn",title:"Benachrichtigungen",text:"Echtzeit-Warnungen bei Compliance-Verstößen oder GMS-Änderungen."}
+  ],
+  compliance: [
+    {target:"compliance-overview",title:"Compliance-Übersicht",text:"Status aller KI-Systeme: klassifiziert, offen, überfällig."},
+    {target:"checker-btn",title:"EU AI Act Checker",text:"7-Schritte-Wizard klassifiziert KI-Systeme in 10 Minuten statt 3 Wochen."},
+    {target:"hierarchy-btn",title:"Regulatory Hierarchy",text:"5-Ebenen-Ansicht: Framework → Kapitel → Artikel → Control → Evidence."}
+  ],
+  technical: [
+    {target:"pipeline-status",title:"Pipeline-Status",text:"CI/CD-Gates im Überblick: Pass/Fail-Rate, blockierte Deployments."},
+    {target:"policy-btn",title:"Policy Explorer",text:"Rego-Policies im Detail: Syntax-Highlighting, Testergebnisse, Versionen."}
+  ],
+  auditor: [
+    {target:"audit-overview",title:"Prüfungs-Dashboard",text:"Read-Only Zugang: Evidence-Completeness je Modell auf einen Blick."},
+    {target:"evidence-btn",title:"Evidence Graph",text:"Lückenlose Kette: Regulatorik → Anforderung → Control → Evidence."}
+  ]
+};
+
+/* ═══════════════════════════════════════════ */
+/* CONTEXT                                     */
+/* ═══════════════════════════════════════════ */
+const AppContext = createContext();
+
+function AppProvider({children}) {
+  const [state, setState] = useState({
+    screen: "login", loginStep: "sso", persona: null, theme: "dark",
+    sidebarOpen: true, mobileSidebar: false, copilotOpen: false,
+    copilotMessages: [], toasts: [], tourActive: false, tourStep: 0,
+    checkerStep: 0, checkerComplete: false, selectedModel: null,
+    graphSelectedNode: null, exportToast: false
+  });
+
+  const set = useCallback((partial) => setState(s => ({...s, ...partial})), []);
+  const navigate = useCallback((screen) => setState(s => ({...s, screen, selectedModel: null, graphSelectedNode: null})), []);
+
+  return <AppContext.Provider value={{state, set, navigate}}> {children} </AppContext.Provider>;
+}
+function useApp() { return useContext(AppContext); }
+
+/* ═══════════════════════════════════════════ */
+/* ANIMATED NUMBER                             */
+/* ═══════════════════════════════════════════ */
+function AnimatedNumber({value, duration=1500, prefix="", suffix=""}) {
+  const [display, setDisplay] = useState(0);
+  const ref = useRef();
+  useEffect(() => {
+    let start = 0; const startTime = Date.now();
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.round(eased * value));
+      if (progress < 1) ref.current = requestAnimationFrame(animate);
+    };
+    ref.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(ref.current);
+  }, [value, duration]);
+  return <span>{prefix}{display}{suffix}</span>;
+}
+
+/* ═══════════════════════════════════════════ */
+/* GMS GAUGE (SVG)                             */
+/* ═══════════════════════════════════════════ */
+function GmsGauge({value=72, size=200}) {
+  const [animVal, setAnimVal] = useState(0);
+  useEffect(() => {
+    const t = setTimeout(() => setAnimVal(value), 100);
+    return () => clearTimeout(t);
+  }, [value]);
+  const cx=size/2, cy=size/2, r=size*0.38;
+  const startAngle = -225, endAngle = 45, range = endAngle - startAngle;
+  const valAngle = startAngle + (animVal/100)*range;
+  const toRad = (d) => d*Math.PI/180;
+  const arcPath = (start, end) => {
+    const s = toRad(start), e = toRad(end);
+    const x1=cx+r*Math.cos(s), y1=cy+r*Math.sin(s);
+    const x2=cx+r*Math.cos(e), y2=cy+r*Math.sin(e);
+    const large = (end-start) > 180 ? 1 : 0;
+    return `M${x1},${y1} A${r},${r} 0 ${large} 1 ${x2},${y2}`;
+  };
+  const color = animVal >= 80 ? "#3D8B6E" : animVal >= 60 ? "#2A6496" : animVal >= 40 ? "#E6A817" : "#C62828";
+  return (
+    <div className="gauge-container" style={{width:size,height:size}}>
+      <svg className="gauge-svg" viewBox={`0 0 ${size} ${size}`}>
+        <path d={arcPath(startAngle, endAngle)} fill="none" stroke="rgba(255,255,255,.08)" strokeWidth="12" strokeLinecap="round"/>
+        <path d={arcPath(startAngle, valAngle)} fill="none" stroke={color} strokeWidth="12" strokeLinecap="round"
+          style={{transition:"all 2s cubic-bezier(.4,0,.2,1)"}}/>
+      </svg>
+      <div className="gauge-value" style={{color}}>
+        <AnimatedNumber value={value} duration={2000}/>
+      </div>
+      <div className="gauge-label">Governance Maturity Score</div>
     </div>
-    <a class="cta" href="../02_Wiki/index.html">Wiki jetzt öffnen &rarr;</a>
-    <div class="loader"></div>
-    <div class="hint">
-      Du wirst automatisch weitergeleitet. Falls nicht, klick oben auf <strong>"Wiki jetzt öffnen"</strong>.<br>
-      Pfad: <code>../02_Wiki/index.html</code>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* RADAR CHART (SVG)                           */
+/* ═══════════════════════════════════════════ */
+function RadarChart({data, size=280}) {
+  const [show, setShow] = useState(false);
+  useEffect(() => { setTimeout(() => setShow(true), 300); }, []);
+  const cx=size/2, cy=size/2, r=size*0.38;
+  const n = data.length;
+  const points = data.map((d, i) => {
+    const angle = (i/n)*2*Math.PI - Math.PI/2;
+    const val = show ? d.value/100 : 0;
+    return {x: cx + r*val*Math.cos(angle), y: cy + r*val*Math.sin(angle), label: d.name, value: d.value};
+  });
+  const gridLevels = [0.25, 0.5, 0.75, 1.0];
+  return (
+    <div className="radar-container" style={{width:size,height:size}}>
+      <svg viewBox={`0 0 ${size} ${size}`} style={{width:"100%",height:"100%"}}>
+        {gridLevels.map((lv, li) => (
+          <polygon key={li} points={data.map((_, i) => {
+            const a=(i/n)*2*Math.PI-Math.PI/2;
+            return `${cx+r*lv*Math.cos(a)},${cy+r*lv*Math.sin(a)}`;
+          }).join(" ")} fill="none" stroke="rgba(255,255,255,.08)" strokeWidth="1"/>
+        ))}
+        {data.map((_, i) => {
+          const a=(i/n)*2*Math.PI-Math.PI/2;
+          return <line key={i} x1={cx} y1={cy} x2={cx+r*Math.cos(a)} y2={cy+r*Math.sin(a)} stroke="rgba(255,255,255,.06)" strokeWidth="1"/>;
+        })}
+        <polygon points={points.map(p=>`${p.x},${p.y}`).join(" ")} fill="rgba(42,100,150,.25)" stroke="#2A6496" strokeWidth="2"
+          style={{transition:"all 1.2s cubic-bezier(.4,0,.2,1)"}}/>
+        {points.map((p, i) => (
+          <g key={i}>
+            <circle cx={p.x} cy={p.y} r="4" fill="#2A6496" style={{transition:"all 1.2s ease"}}/>
+            <text x={cx + (r+18)*Math.cos((i/n)*2*Math.PI-Math.PI/2)} y={cy + (r+18)*Math.sin((i/n)*2*Math.PI-Math.PI/2)}
+              fill="var(--text3)" fontSize="10" textAnchor="middle" dominantBaseline="middle">{p.label.split(" ")[0]}</text>
+          </g>
+        ))}
+      </svg>
     </div>
-  </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* LINE CHART (SVG)                            */
+/* ═══════════════════════════════════════════ */
+function LineChart({data, width=400, height=180}) {
+  const pad = {t:20,r:20,b:30,l:36};
+  const w = width-pad.l-pad.r, h = height-pad.t-pad.b;
+  const maxV = Math.max(...data.map(d=>d.score));
+  const minV = Math.min(...data.map(d=>d.score));
+  const range = maxV - minV || 1;
+  const pts = data.map((d,i) => ({
+    x: pad.l + (i/(data.length-1))*w,
+    y: pad.t + h - ((d.score-minV)/range)*h*0.8 - h*0.1
+  }));
+  const line = pts.map((p,i) => `${i===0?"M":"L"}${p.x},${p.y}`).join(" ");
+  return (
+    <svg viewBox={`0 0 ${width} ${height}`} style={{width:"100%",height}}>
+      {data.map((d,i) => (
+        <text key={i} x={pts[i].x} y={height-8} fill="var(--text3)" fontSize="9" textAnchor="middle">{d.month}</text>
+      ))}
+      <path d={line} fill="none" stroke="#2A6496" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      {pts.map((p,i) => (
+        <g key={i}>
+          <circle cx={p.x} cy={p.y} r="4" fill="#2A6496" stroke="var(--surface2)" strokeWidth="2"/>
+          <text x={p.x} y={p.y-10} fill="var(--text2)" fontSize="10" textAnchor="middle" fontWeight="600">{data[i].score}</text>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* BAR (horizontal)                            */
+/* ═══════════════════════════════════════════ */
+function HBar({value, max=100, color="#2A6496", height=8}) {
+  const [w, setW] = useState(0);
+  useEffect(() => { setTimeout(() => setW(value/max*100), 100); }, [value,max]);
+  return (
+    <div style={{background:"rgba(255,255,255,.06)",borderRadius:height/2,height,width:"100%",overflow:"hidden"}}>
+      <div style={{width:`${w}%`,height:"100%",background:color,borderRadius:height/2,transition:"width 1.5s cubic-bezier(.4,0,.2,1)"}}/>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* TOAST SYSTEM                                */
+/* ═══════════════════════════════════════════ */
+function ToastContainer() {
+  const {state, set} = useApp();
+  const removeToast = (id) => set({toasts: state.toasts.filter(t => t.id !== id)});
+  return (
+    <div className="toast-container">
+      {state.toasts.map(t => (
+        <div key={t.id} className={`toast ${t.type}`}>
+          <span style={{flex:1}}> {t.text} </span>
+          <span className="toast-close" onClick={() => removeToast(t.id)}>&times;</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* COPILOT PANEL                               */
+/* ═══════════════════════════════════════════ */
+function CoPilotPanel() {
+  const {state, set} = useApp();
+  const [typing, setTyping] = useState(false);
+  const [typedText, setTypedText] = useState("");
+  const [inputVal, setInputVal] = useState("");
+  const msgEndRef = useRef();
+
+  const suggestions = useMemo(() => {
+    if (!state.persona) return [];
+    const screenSuggestions = {
+      dashboard: {
+        executive: ["Warum ist der GMS gefallen?","Welche Modelle haben das höchste Risiko?","Zeige Quartalsvergleich"],
+        compliance: ["Wie viele Modelle sind noch offen?","Welche Deadline ist am kritischsten?","Compliance-Fortschritt zeigen"],
+        technical: ["Welche Policies blockieren Deployments?","Gate-Pass-Rate erklären","Letzte Policy-Violations"],
+        auditor: ["Evidence-Lücken identifizieren","Completeness-Score erklären","Prüfungsrelevante Modelle zeigen"]
+      },
+      checker: {default: ["Ist KreditScore-LLM Hochrisiko?","Welche Art. 9 Pflichten fehlen?","Vergleiche mit ISO 42001"]},
+      evidence: {default: ["Welche Evidence fehlt für Art. 11?","Zeige Artefakte zu AML-Detector","Wie hängen Art. 9 und Art. 15 zusammen?"]},
+      hierarchy: {default: ["Crosswalk zwischen EU AI Act und DORA","Welche Controls decken Art. 14 ab?","Evidence-Lücken im Sankey zeigen"]},
+      itsm: {default: ["Root Cause von INC0012345?","Wie beeinflusst der Incident den GMS?","PIR-Status aller Incidents"]},
+      gms: {default: ["Warum ist Audit Readiness gesunken?","GMS-Prognose bei voller Compliance","Welche Komponente hat den größten Einfluss?"]},
+      registry: {default: ["Zeige alle Hochrisiko-Modelle","Status von KreditScore-LLM?","Welches Modell braucht Aufmerksamkeit?"]}
+    };
+    const screenMap = screenSuggestions[state.screen];
+    if (screenMap) {
+      const specific = screenMap[state.persona] || screenMap.default;
+      if (specific) return specific;
+    }
+    const r = COPILOT_RESPONSES[state.persona];
+    if (!r) return [];
+    return [r.q, "Zeige Top-Risiken", "GMS-Trend erklären"];
+  }, [state.persona, state.screen]);
+
+  const sendMessage = useCallback((text) => {
+    if (!text || typing) return;
+    const userMsg = {id: Date.now(), type: "user", text};
+    const newMsgs = [...state.copilotMessages, userMsg];
+    set({copilotMessages: newMsgs});
+    setInputVal("");
+    setTyping(true);
+
+    const resp = COPILOT_RESPONSES[state.persona];
+    const answer = resp ? resp.a : "Ich analysiere Ihre Governance-Daten...\n\nBitte wählen Sie einen spezifischen Bereich.";
+
+    let i = 0;
+    setTypedText("");
+    const interval = setInterval(() => {
+      if (i < answer.length) {
+        setTypedText(answer.slice(0, i + 1));
+        i++;
+      } else {
+        clearInterval(interval);
+        setTyping(false);
+        const botMsg = {id: Date.now()+1, type: "bot", text: answer};
+        set({copilotMessages: [...newMsgs, botMsg]});
+        setTypedText("");
+      }
+    }, 15);
+  }, [state.copilotMessages, state.persona, typing, set]);
+
+  useEffect(() => { msgEndRef.current?.scrollIntoView({behavior:"smooth"}); }, [state.copilotMessages, typedText]);
+
+  return (
+    <div className={`copilot-overlay ${state.copilotOpen ? "open" : ""}`}>
+      <div className="copilot-header">
+        <span style={{fontSize:20}}>🤖</span>
+        <span style={{fontWeight:600,flex:1,color:"var(--text1)",fontSize:14}}>AGP CoPilot</span>
+        <button className="topbar-btn" onClick={() => set({copilotOpen:false})}>&times;</button>
+      </div>
+      <div className="copilot-suggestions">
+        {suggestions.map((s,i) => (
+          <button key={i} className="copilot-chip" onClick={() => sendMessage(s)}>{s}</button>
+        ))}
+      </div>
+      <div className="copilot-messages">
+        <div className="copilot-bubble bot">
+          Willkommen! Ich bin der AGP CoPilot. Wie kann ich Ihnen bei der KI-Governance helfen?
+          <div className="posthoc-hint" style={{marginTop:8,fontSize:10}}>🔒 Read-Only · PostHoc-konform · Alle Interaktionen werden protokolliert</div>
+        </div>
+        {state.copilotMessages.map(m => (
+          <div key={m.id} className={`copilot-bubble ${m.type === "user" ? "user" : "bot"}`}
+            dangerouslySetInnerHTML={{__html: m.text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br/>")}}/>
+        ))}
+        {typing && (
+          <div className="copilot-bubble bot">
+            <span dangerouslySetInnerHTML={{__html: typedText.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br/>")}}/>
+            <span className="typing-cursor"/>
+          </div>
+        )}
+        <div ref={msgEndRef}/>
+      </div>
+      <div className="copilot-input">
+        <input value={inputVal} onChange={e => setInputVal(e.target.value)}
+          onKeyDown={e => e.key === "Enter" && sendMessage(inputVal)}
+          placeholder="Fragen Sie den AGP CoPilot..."/>
+        <button onClick={() => sendMessage(inputVal)}>Senden</button>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* LOGIN SCREEN                                */
+/* ═══════════════════════════════════════════ */
+function LoginScreen() {
+  const {state, set} = useApp();
+  const [mfaCodes, setMfaCodes] = useState(["","","","","",""]);
+  const [mfaDone, setMfaDone] = useState(false);
+
+  const startMFA = () => {
+    set({loginStep: "mfa"});
+    const codes = ["4","7","2","9","1","5"];
+    codes.forEach((c, i) => {
+      setTimeout(() => setMfaCodes(prev => {const n=[...prev];n[i]=c;return n;}), 300 + i*200);
+    });
+    setTimeout(() => setMfaDone(true), 300 + 6*200 + 500);
+  };
+
+  const selectPersona = (id) => {
+    set({persona: id, screen: "dashboard", loginStep: "sso"});
+    // Toast after delay
+    const toast = TOAST_MESSAGES[id];
+    if (toast) {
+      setTimeout(() => {
+        set({toasts: [{id: Date.now(), type: toast.type, text: toast.text}]});
+      }, toast.delay);
+    }
+    // Guided tour after short delay
+    setTimeout(() => set({tourActive: true, tourStep: 0}), 2000);
+  };
+
+  if (state.loginStep === "sso") {
+    return (
+      <div className="login-bg">
+        <div className="login-card">
+          <img className="splash" src={LOGO_SPLASH_SW} alt="AEGIRA"/>
+          <h1>Anmelden bei AEGIRA</h1>
+          <p>AI Governance Platform — Meridian Bank AG</p>
+          <button className="sso-btn" onClick={startMFA}>
+            <svg width="20" height="20" viewBox="0 0 20 20"><rect x="1" y="1" width="8" height="8" fill="#F25022"/><rect x="11" y="1" width="8" height="8" fill="#7FBA00"/><rect x="1" y="11" width="8" height="8" fill="#00A4EF"/><rect x="11" y="11" width="8" height="8" fill="#FFB900"/></svg>
+            Mit Unternehmenskonto anmelden
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (state.loginStep === "mfa" && !mfaDone) {
+    return (
+      <div className="login-bg">
+        <div className="login-card">
+          <img className="splash" src={LOGO_SPLASH_SW} alt="AEGIRA"/>
+          <h1>Multi-Faktor-Authentifizierung</h1>
+          <p>Geben Sie den Code aus Ihrer Authenticator-App ein</p>
+          <div className="mfa-grid">
+            {mfaCodes.map((c, i) => (
+              <input key={i} className={`mfa-input ${c ? "filled" : ""}`} value={c} readOnly maxLength="1"/>
+            ))}
+          </div>
+          <p style={{fontSize:11,color:"var(--text3)"}}>Code wird automatisch verifiziert...</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="login-bg">
+      <div className="login-card" style={{maxWidth:560}}>
+        <img className="splash" src={LOGO_SPLASH_SW} alt="AEGIRA"/>
+        <h1>Perspektive wählen</h1>
+        <p>Demo-Modus — Wählen Sie eine Rolle für den Durchlauf</p>
+        <div className="persona-grid">
+          {PERSONAS.map((p, i) => (
+            <div key={p.id} className="persona-card" onClick={() => selectPersona(p.id)}
+              style={{animationDelay:`${i*100}ms`,animation:"slideUp .4s ease-out both"}}>
+              <div className="avatar" style={{background:p.color,color:"#fff"}}>{p.icon}</div>
+              <h3>{p.name}</h3>
+              <span>{p.role}</span>
+              <div style={{fontSize:11,color:"var(--text3)",marginTop:4}}>{p.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* SIDEBAR                                     */
+/* ═══════════════════════════════════════════ */
+function Sidebar() {
+  const {state, set, navigate} = useApp();
+  const items = NAV_ITEMS[state.persona] || [];
+  const theme = state.theme;
+  return (
+    <div className={`sidebar ${!state.sidebarOpen ? "collapsed" : ""} ${state.mobileSidebar ? "mobile-open" : ""}`}>
+      <div className="sidebar-logo">
+        <img src={LOGO_SPLASH_SW} alt="AEGIRA"/>
+      </div>
+      <div className="nav-section">Navigation</div>
+      {items.map(item => (
+        <div key={item.id} className={`nav-item ${state.screen === item.id ? "active" : ""}`}
+          onClick={() => { navigate(item.id); set({mobileSidebar:false}); }}>
+          <span className="nav-icon">{item.icon}</span>
+          <span className="nav-label">{item.label}</span>
+        </div>
+      ))}
+      <div style={{flex:1}}/>
+      <div className="nav-section">System</div>
+      <div className="nav-item" onClick={() => set({screen:"login",persona:null,copilotMessages:[],toasts:[],tourActive:false})}>
+        <span className="nav-icon">🚪</span>
+        <span className="nav-label">Abmelden</span>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* TOPBAR                                      */
+/* ═══════════════════════════════════════════ */
+function TopBar() {
+  const {state, set} = useApp();
+  const persona = PERSONAS.find(p => p.id === state.persona);
+  const screenLabel = {dashboard:"Dashboard",gms:"GMS Detail",registry:"AI Registry",evidence:"Evidence Graph",
+    report:"Board Report",checker:"Compliance Checker",hierarchy:"Reg. Hierarchy",audit:"Audit Trail",
+    itsm:"ITSM Incidents",policy:"Policy Explorer",gates:"Gate-Historie",export:"Audit-Export"
+  }[state.screen] || "Dashboard";
+
+  return (
+    <div className="topbar">
+      <button className="topbar-btn" style={{display:"none"}} id="menu-btn"
+        onClick={() => set({mobileSidebar:!state.mobileSidebar})}>☰</button>
+      <span className="topbar-breadcrumb">{persona?.role} › {screenLabel}</span>
+      <div className="topbar-spacer"/>
+      <div className="persona-badge" onClick={() => set({screen:"login",loginStep:"personas"})}>
+        <div className="persona-dot" style={{background:persona?.color}}/>
+        <span>{persona?.name}</span>
+      </div>
+      <button className="topbar-btn" id="notif-btn" onClick={() => {}}>
+        🔔 {state.toasts.length > 0 && <span className="topbar-badge">{state.toasts.length}</span>}
+      </button>
+      <button className="topbar-btn" onClick={() => {
+        const next = state.theme === "dark" ? "light" : "dark";
+        set({theme: next});
+        document.body.setAttribute("data-theme", next);
+      }}>
+        {state.theme === "dark" ? "🌙" : "☀️"}
+      </button>
+      <button className="topbar-btn" id="copilot-btn" onClick={() => set({copilotOpen:!state.copilotOpen})}>🤖</button>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* GUIDED TOUR                                 */
+/* ═══════════════════════════════════════════ */
+function GuidedTour() {
+  const {state, set} = useApp();
+  if (!state.tourActive || !state.persona) return null;
+  const steps = TOUR_STEPS[state.persona] || [];
+  if (steps.length === 0 || state.tourStep >= steps.length) return null;
+  const step = steps[state.tourStep];
+  const next = () => {
+    if (state.tourStep + 1 >= steps.length) set({tourActive: false});
+    else set({tourStep: state.tourStep + 1});
+  };
+  return (
+    <>
+      <div className="tour-backdrop" onClick={() => set({tourActive:false})}/>
+      <div className="tour-tooltip" style={{top:"50%",left:"50%",transform:"translate(-50%,-50%)"}}>
+        <h4>{step.title}</h4>
+        <p>{step.text}</p>
+        <div className="tour-actions">
+          <button className="tour-btn tour-btn-skip" onClick={() => set({tourActive:false})}>Überspringen</button>
+          <div className="tour-dots">
+            {steps.map((_,i) => <div key={i} className={`tour-dot ${i===state.tourStep?"active":""}`}/>)}
+          </div>
+          <button className="tour-btn tour-btn-next" onClick={next}>
+            {state.tourStep + 1 >= steps.length ? "Fertig" : "Weiter"}
+          </button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* EXECUTIVE DASHBOARD                         */
+/* ═══════════════════════════════════════════ */
+function ExecDashboard() {
+  const {navigate, state} = useApp();
+  const persona = PERSONAS.find(p => p.id === state.persona);
+  const highRisk = MODELS.filter(m => m.risk === "Hochrisiko");
+  const warnings = MODELS.filter(m => m.status === "warning");
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:4}}>Willkommen, {persona?.name || "Dr. Richter"}</h2>
+      <p style={{fontSize:13,color:"var(--text3)",marginBottom:20}}>Meridian Bank AG — KI-Governance-Überblick</p>
+      <div className="info-banner"><span className="banner-icon">🎯</span><div><strong>Executive Dashboard:</strong> Ihr Steuerungscockpit für KI-Governance. Der GMS (Governance Maturity Score) aggregiert 4 Dimensionen: Compliance Coverage, Audit Readiness, Risk Mitigation und Operational Maturity. Klicken Sie auf den GMS-Gauge für Details, oder auf das Portfolio für die Modellübersicht.</div></div>
+      <div className="dash-grid dash-grid-60-40">
+        <div>
+          <div className="card" id="gms-gauge" style={{textAlign:"center",cursor:"pointer"}} onClick={() => navigate("gms")}>
+            <GmsGauge value={72} size={200}/><div className="info-tip"><span className="tip-icon">i</span><span className="tip-text">GMS = Governance Maturity Score (0–100). Berechnet aus: Compliance Coverage (25%), Audit Readiness (25%), Risk Mitigation (25%), Operational Maturity (25%). Ziel: ≥75.</span></div>
+            <div style={{display:"flex",justifyContent:"center",gap:16,marginTop:12}}>
+              <span className="badge badge-red">↓6 vs. Vormonat</span>
+              <span className="badge badge-blue">Ziel: ≥75</span>
+            </div>
+          </div>
+          <div className="card" style={{marginTop:16}} id="portfolio-heat">
+            <div className="card-header">
+              <span className="card-title">KI-Portfolio ({MODELS.length} Modelle)<span className="info-tip"><span className="tip-icon">i</span><span className="tip-text">Heatmap aller registrierten KI-Modelle. Grün = konform, Gelb = Klassifizierung offen, Rot = Handlungsbedarf. Klicken Sie auf ein Modell für Details.</span></span></span>
+              <button className="export-btn" onClick={() => navigate("registry")}>Alle anzeigen →</button>
+            </div>
+            <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:8}}>
+              {MODELS.map((m,i) => (
+                <div key={i} style={{padding:"10px 8px",borderRadius:6,textAlign:"center",fontSize:10,
+                  background: m.status==="warning"?"rgba(198,40,40,.12)":m.status==="pending"?"rgba(230,168,23,.1)":"rgba(61,139,110,.1)",
+                  color: m.status==="warning"?"#EF5350":m.status==="pending"?"#FFD54F":"#66BB6A",
+                  cursor:"pointer"}} onClick={() => navigate("registry")}>
+                  {m.name.split("-")[0]}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="card">
+            <div className="card-header"><span className="card-title">GMS-Trend (6 Monate)</span></div>
+            <LineChart data={GMS_HISTORY} width={380} height={180}/>
+          </div>
+          <div className="card" style={{marginTop:16}}>
+            <div className="card-header"><span className="card-title">Top-Risiken</span></div>
+            {warnings.map((m,i) => (
+              <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"8px 0",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+                <span className={`badge ${m.status==="warning" && m.statusText.includes("fällig")?"badge-red":m.statusText.includes("Drift")?"badge-orange":"badge-amber"}`}>
+                  {m.statusText}
+                </span>
+                <span style={{fontSize:12,color:"var(--text2)"}}>{m.name} {m.ver}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="posthoc-hint">🛡️ AGP analysiert nachgelagert — kein Eingriff in laufende KI-Systeme (PostHoc-Prinzip)</div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* GMS DETAIL                                  */
+/* ═══════════════════════════════════════════ */
+function GmsDetail() {
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:20}}>Governance Maturity Score — Detail</h2>
+      <div className="dash-grid dash-grid-60-40">
+        <div className="card" style={{textAlign:"center"}}>
+          <GmsGauge value={72} size={220}/>
+          <div style={{marginTop:8}}>
+            <span className="badge badge-red" style={{fontSize:13}}>↓6 Punkte vs. Vormonat (78 → 72)</span>
+          </div>
+          <div style={{marginTop:20}}>
+            <RadarChart data={GMS_COMPONENTS} size={260}/>
+          </div>
+        </div>
+        <div>
+          {GMS_COMPONENTS.map((c,i) => (
+            <div key={i} className="card" style={{marginBottom:12}}>
+              <div style={{display:"flex",justifyContent:"space-between",marginBottom:6}}>
+                <span style={{fontSize:13,fontWeight:600,color:"var(--text1)"}}>{c.name}</span>
+                <span style={{fontSize:13,fontWeight:700,color: c.value < 70 ? "#EF5350" : "#2A6496"}}>{c.value}%</span>
+              </div>
+              <HBar value={c.value} color={c.value < 70 ? "#EF5350" : "#2A6496"}/>
+              <p style={{fontSize:11,color:"var(--text3)",marginTop:6}}>{c.desc}</p>
+              {c.name === "Audit Readiness" && (
+                <div style={{marginTop:8,padding:"6px 10px",background:"rgba(198,40,40,.1)",borderRadius:4,fontSize:11,color:"#EF5350"}}>
+                  ⚠️ KreditScore-LLM v2.3: Konformitätsbewertung abgelaufen (−14 Punkte)
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* AI REGISTRY                                 */
+/* ═══════════════════════════════════════════ */
+function AIRegistry() {
+  const [filter, setFilter] = useState("all");
+  const filtered = filter === "all" ? MODELS : MODELS.filter(m =>
+    filter === "high" ? m.risk === "Hochrisiko" :
+    filter === "limited" ? m.risk === "Limited Risk" :
+    m.risk === "Minimal Risk"
+  );
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:4}}>AI Registry — Meridian Bank AG</h2>
+      <p style={{fontSize:13,color:"var(--text3)",marginBottom:16}}>{MODELS.length} registrierte KI-Modelle</p>
+      <div style={{display:"flex",gap:8,marginBottom:16}}>
+        {["all","high","limited","minimal"].map(f => (
+          <button key={f} className={`badge ${filter===f?"badge-blue":"badge-steel"}`} style={{cursor:"pointer"}}
+            onClick={() => setFilter(f)}>
+            {f==="all"?"Alle ("+MODELS.length+")":f==="high"?"Hochrisiko":f==="limited"?"Limited":"Minimal"}
+          </button>
+        ))}
+      </div>
+      <div className="card" style={{padding:0,overflow:"hidden"}}>
+        <table className="data-table">
+          <thead><tr>
+            <th>Modell</th><th>Version</th><th>Risikoklasse</th><th>Abteilung</th><th>Status</th><th>GMS</th>
+          </tr></thead>
+          <tbody>
+            {filtered.map((m,i) => (
+              <tr key={i}>
+                <td style={{fontWeight:600}}>{m.name}</td>
+                <td>{m.ver}</td>
+                <td><span className={`badge ${m.risk==="Hochrisiko"?"badge-orange":m.risk==="Limited Risk"?"badge-amber":"badge-green"}`}>
+                  {m.risk}</span></td>
+                <td>{m.dept}</td>
+                <td><span className={`badge ${m.status==="warning"?"badge-red":m.status==="pending"?"badge-amber":"badge-green"}`}>
+                  {m.statusText}</span></td>
+                <td><AnimatedNumber value={m.gms} suffix="%"/></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* COMPLIANCE DASHBOARD                        */
+/* ═══════════════════════════════════════════ */
+function ComplianceDashboard() {
+  const {navigate, state} = useApp();
+  const persona = PERSONAS.find(p => p.id === state.persona);
+  const classified = MODELS.filter(m => m.risk !== "Minimal Risk" || m.status === "ok").length;
+  const open = MODELS.filter(m => m.status === "pending").length;
+  const warnings = MODELS.filter(m => m.status === "warning").length;
+  return (
+    <div id="compliance-overview">
+      <h2 style={{fontSize:18,marginBottom:4}}>{persona?.name || "Thomas Weber"} — Compliance Dashboard</h2>
+      <p style={{fontSize:13,color:"var(--text3)",marginBottom:20}}>EU AI Act Klassifizierungsstatus — Meridian Bank AG</p>
+      <div className="info-banner"><span className="banner-icon">⚖️</span><div><strong>Compliance Dashboard:</strong> Übersicht aller KI-Modelle nach EU AI Act Risikoklassen. Nutzen Sie den 7-Schritte Compliance Checker für neue Klassifizierungen. Die Regulatory Hierarchy zeigt den Zusammenhang von Framework → Kapitel → Artikel → Control → Evidence. Deadline-Countdown bis zur Hochrisiko-Frist: 2. August 2026.</div></div>
+      <div className="dash-grid dash-grid-4">
+        <div className="card" style={{textAlign:"center"}}>
+          <div style={{fontSize:32,fontWeight:700,color:"var(--text1)"}}><AnimatedNumber value={MODELS.length}/></div>
+          <div style={{fontSize:12,color:"var(--text3)"}}>Modelle gesamt</div>
+        </div>
+        <div className="card" style={{textAlign:"center"}}>
+          <div style={{fontSize:32,fontWeight:700,color:"#66BB6A"}}><AnimatedNumber value={MODELS.length - open - warnings}/></div>
+          <div style={{fontSize:12,color:"var(--text3)"}}>Konform</div>
+        </div>
+        <div className="card" style={{textAlign:"center"}}>
+          <div style={{fontSize:32,fontWeight:700,color:"#FFD54F"}}><AnimatedNumber value={open}/></div>
+          <div style={{fontSize:12,color:"var(--text3)"}}>Klassifizierung offen</div>
+        </div>
+        <div className="card" style={{textAlign:"center"}}>
+          <div style={{fontSize:32,fontWeight:700,color:"#EF5350"}}><AnimatedNumber value={warnings}/></div>
+          <div style={{fontSize:12,color:"var(--text3)"}}>Handlungsbedarf</div>
+        </div>
+      </div>
+      <div className="dash-grid dash-grid-2" style={{marginTop:20}}>
+        <div className="card" style={{cursor:"pointer"}} id="checker-btn" onClick={() => navigate("checker")}>
+          <div style={{fontSize:28,marginBottom:8}}>⚖️</div>
+          <div className="card-title">EU AI Act Compliance Checker</div>
+          <p style={{fontSize:12,color:"var(--text3)",marginTop:4}}>7-Schritte-Wizard zur automatisierten Risikoklassifizierung</p>
+          <button className="export-btn" style={{marginTop:12}}>Wizard starten →</button>
+        </div>
+        <div className="card" style={{cursor:"pointer"}} id="hierarchy-btn" onClick={() => navigate("hierarchy")}>
+          <div style={{fontSize:28,marginBottom:8}}>📊</div>
+          <div className="card-title">Regulatory Hierarchy</div>
+          <p style={{fontSize:12,color:"var(--text3)",marginTop:4}}>5-Ebenen: Framework → Kapitel → Artikel → Control → Evidence</p>
+          <button className="export-btn" style={{marginTop:12}}>Hierarchy öffnen →</button>
+        </div>
+      </div>
+      <div className="card" style={{marginTop:20}}>
+        <div className="card-header">
+          <span className="card-title">Deadline-Countdown</span>
+          <span className="badge badge-red">131 Tage</span>
+        </div>
+        <div style={{display:"flex",alignItems:"center",gap:12}}>
+          <div style={{flex:1}}>
+            <HBar value={66} color="#E6A817" height={12}/>
+          </div>
+          <span style={{fontSize:12,color:"var(--text3)"}}>EU AI Act Hochrisiko-Frist: 2. August 2026</span>
+        </div>
+      </div>
+      <div className="posthoc-hint">🛡️ AGP klassifiziert nachgelagert — keine Echtzeit-Intervention (PostHoc-Prinzip)</div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* COMPLIANCE CHECKER (7-Step Wizard)          */
+/* ═══════════════════════════════════════════ */
+function ComplianceChecker() {
+  const {state, set, navigate} = useApp();
+  const [step, setStep] = useState(0);
+  const [result, setResult] = useState(false);
+
+  const stepContent = [
+    // Step 0: Zweck & Kontext
+    <div key="0">
+      <h3 style={{fontSize:15,marginBottom:12,color:"var(--text1)"}}>Schritt 1: Zweck & Kontext des KI-Systems</h3>
+      <div style={{display:"grid",gap:12}}>
+        <div><label style={{fontSize:12,color:"var(--text3)",display:"block",marginBottom:4}}>Modellname</label>
+          <input style={{width:"100%",padding:10,background:"var(--surface3)",border:"1px solid var(--steel)",borderRadius:6,color:"var(--text1)"}} defaultValue="KreditScore-LLM v2.3"/></div>
+        <div><label style={{fontSize:12,color:"var(--text3)",display:"block",marginBottom:4}}>Einsatzzweck</label>
+          <input style={{width:"100%",padding:10,background:"var(--surface3)",border:"1px solid var(--steel)",borderRadius:6,color:"var(--text1)"}} defaultValue="Automatisierte Kreditwürdigkeitsprüfung für Privatkunden"/></div>
+        <div><label style={{fontSize:12,color:"var(--text3)",display:"block",marginBottom:4}}>Betroffene Personen</label>
+          <input style={{width:"100%",padding:10,background:"var(--surface3)",border:"1px solid var(--steel)",borderRadius:6,color:"var(--text1)"}} defaultValue="Kreditantragsteller (natürliche Personen)"/></div>
+      </div>
+    </div>,
+    // Step 1-5: simplified
+    ...["Verbotene Praktiken (Art. 5)", "Annex I — Produktsicherheit", "Annex III — Hochrisiko-Domänen",
+      "Art. 6(3) — Ausnahmeprüfung", "Transparenzpflichten (Art. 50)"].map((title, idx) => (
+      <div key={idx+1}>
+        <h3 style={{fontSize:15,marginBottom:12,color:"var(--text1)"}}>Schritt {idx+2}: {title}</h3>
+        {idx === 0 ? (
+          <div style={{fontSize:13,color:"var(--text2)"}}>
+            <p style={{marginBottom:8}}>Prüfung auf 8 verbotene Praktiken nach Art. 5 EU AI Act:</p>
+            {["Social Scoring","Subliminal Manipulation","Exploitation of Vulnerabilities","Biometrische Kategorisierung",
+              "Predictive Policing","Emotion Recognition (Arbeit/Bildung)","Real-Time Biometric Identification","Facial Recognition DB"
+            ].map((p,i) => (
+              <div key={i} style={{display:"flex",alignItems:"center",gap:8,padding:"6px 0",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+                <span style={{color:"#66BB6A"}}>✅</span>
+                <span>{p} — Nicht zutreffend</span>
+              </div>
+            ))}
+          </div>
+        ) : idx === 2 ? (
+          <div style={{fontSize:13,color:"var(--text2)"}}>
+            <p style={{marginBottom:8}}>8 Hochrisiko-Domänen nach Annex III:</p>
+            {["Biometrie","Kritische Infrastruktur","Bildung & Berufsbildung","Beschäftigung & Personalwesen",
+              "Zugang zu wesentlichen Diensten","Strafverfolgung","Migration & Grenzschutz","Justiz & Demokratie"
+            ].map((d,i) => (
+              <div key={i} style={{display:"flex",alignItems:"center",gap:8,padding:"8px 0",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+                <span style={{color: i===4 ? "#2A6496" : "var(--text3)"}}>{i===4 ? "🔵" : "⚪"}</span>
+                <span style={{fontWeight: i===4 ? 700 : 400, color: i===4 ? "var(--accent)" : "var(--text2)"}}>{d}</span>
+                {i===4 && <span className="badge badge-orange" style={{marginLeft:"auto"}}>ZUTREFFEND</span>}
+              </div>
+            ))}
+            <div style={{marginTop:8,padding:8,background:"rgba(42,100,150,.1)",borderRadius:6,fontSize:12,color:"var(--accent)"}}>
+              → Domäne 5: Kreditwürdigkeitsprüfung = Hochrisiko nach Annex III
+            </div>
+          </div>
+        ) : (
+          <div style={{fontSize:13,color:"var(--text2)",padding:20,textAlign:"center"}}>
+            <span className="badge badge-green" style={{fontSize:14,padding:"8px 20px"}}>✅ Keine Einschränkung — Weiter zu Schritt {idx+3}</span>
+          </div>
+        )}
+      </div>
+    )),
+    // Step 6: Result
+    <div key="6">
+      <div style={{textAlign:"center",fontSize:32,animation:"fadeIn 0.5s ease",marginBottom:8}}>🎯✅</div>
+      <h3 style={{fontSize:15,marginBottom:12,color:"var(--text1)"}}>Ergebnis: Risikoklassifizierung</h3>
+      <div style={{textAlign:"center",padding:20}}>
+        <span className="badge badge-orange" style={{fontSize:18,padding:"12px 32px"}}>⚠️ HOCHRISIKO — Annex III, Domäne 5</span>
+        <p style={{fontSize:13,color:"var(--text3)",marginTop:12}}>Kreditwürdigkeitsprüfung = Zugang zu wesentlichen Diensten</p>
+      </div>
+      <div className="card" style={{marginTop:16}}>
+        <div className="card-title" style={{marginBottom:12}}>Pflichtenkatalog (8 Artikel)</div>
+        {["Art. 9 — Risk Management","Art. 10 — Daten-Governance","Art. 11 — Technische Dokumentation",
+          "Art. 13 — Transparenz","Art. 14 — Human Oversight","Art. 15 — Genauigkeit & Robustheit",
+          "Art. 17 — Qualitätsmanagement","Art. 61 — Post-Market Monitoring"
+        ].map((a,i) => (
+          <div key={i} style={{display:"flex",alignItems:"center",gap:8,padding:"6px 0",fontSize:13,borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+            <span style={{color:i<5?"#66BB6A":"#FFD54F"}}>{i<5?"✅":"⚠️"}</span>
+            <span style={{color:"var(--text2)"}}>{a}</span>
+            <span className={`badge ${i<5?"badge-green":"badge-amber"}`} style={{marginLeft:"auto"}}>{i<5?"Erfüllt":"Offen"}</span>
+          </div>
+        ))}
+      </div>
+      <div className="card" style={{marginTop:12,textAlign:"center"}}>
+        <div style={{fontSize:12,color:"var(--text3)",marginBottom:8}}>GMS-Impact bei vollständiger Compliance</div>
+        <span style={{fontSize:28,fontWeight:700,color:"var(--accent)"}}>72 → 86</span>
+        <span style={{fontSize:13,color:"#66BB6A",marginLeft:8}}>+14 Punkte</span>
+      </div>
+    </div>
+  ];
+
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:16}}>EU AI Act Compliance Checker</h2>
+      <div className="wizard-steps">
+        {CHECKER_STEPS.map((s, i) => (
+          <React.Fragment key={i}>
+            <div className={`wizard-step ${i===step?"active":i<step?"done":""}`} onClick={() => i <= step && setStep(i)}>
+              <div style={{fontSize:9,marginBottom:2}}>{i+1}</div>{s}
+            </div>
+            {i < CHECKER_STEPS.length - 1 && <span className="wizard-step-arrow">›</span>}
+          </React.Fragment>
+        ))}
+      </div>
+      <div className="card">{stepContent[step]}</div>
+      <div style={{display:"flex",justifyContent:"space-between",marginTop:16}}>
+        <button className="export-btn" onClick={() => step > 0 && setStep(step-1)} disabled={step===0}>← Zurück</button>
+        <button className="export-btn" style={{background:"var(--accent)",color:"#fff"}}
+          onClick={() => step < 6 ? setStep(step+1) : navigate("dashboard")}>
+          {step < 6 ? "Weiter →" : "Zum Dashboard"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* REGULATORY HIERARCHY (Sankey)               */
+/* ═══════════════════════════════════════════ */
+function RegulatoryHierarchy() {
+  const svgRef = useRef();
+  const [ready, setReady] = useState(false);
+  useEffect(() => { const t = setTimeout(() => setReady(true), 50); return () => clearTimeout(t); }, []);
+  useEffect(() => {
+    if (!svgRef.current || !ready) return;
+    const svg = d3.select(svgRef.current);
+    svg.selectAll("*").remove();
+    const width = svgRef.current.clientWidth || svgRef.current.parentElement?.clientWidth || 900;
+    const height = 400;
+    const margin = {top:10,right:10,bottom:10,left:10};
+
+    const nodes = [
+      // Level 0: Frameworks
+      {name:"EU AI Act"},{name:"DORA"},{name:"BSI AIC4"},{name:"ISO 42001"},{name:"NIS2"},
+      // Level 1: Chapters
+      {name:"Titel III (Hochrisiko)"},{name:"Kap. II (IKT-Risiko)"},{name:"§4 (Anforderungen)"},{name:"§6 (Planung)"},{name:"Art. 21 (Maßnahmen)"},
+      // Level 2: Articles
+      {name:"Art. 9 (Risk Mgmt)"},{name:"Art. 11 (Doku)"},{name:"Art. 14 (Oversight)"},{name:"Art. 5 (IKT-Gov)"},{name:"AIC4-C1"},{name:"§6.1 (Risiken)"},{name:"NIS2-M1"},
+      // Level 3: Controls
+      {name:"Risikobewertung"},{name:"Tech. Dokumentation"},{name:"Human-Oversight-Plan"},{name:"IKT-Risiko-Policy"},{name:"Cloud-Security"},{name:"AI-Risk-Assessment"},{name:"Incident-Reporting"},
+      // Level 4: Evidence
+      {name:"risk_assess_v2.3.pdf"},{name:"model_card_v2.3.md"},{name:"oversight_protocol.pdf"},{name:"ikt_policy_2026.pdf"},{name:"aic4_cert.pdf"},{name:"iso42001_plan.pdf"},{name:"incident_log.json"}
+    ];
+
+    const links = [
+      // Framework → Chapter
+      {source:0,target:5,value:3},{source:1,target:6,value:1},{source:2,target:7,value:1},{source:3,target:8,value:1},{source:4,target:9,value:1},
+      // Chapter → Article
+      {source:5,target:10,value:1},{source:5,target:11,value:1},{source:5,target:12,value:1},{source:6,target:13,value:1},{source:7,target:14,value:1},{source:8,target:15,value:1},{source:9,target:16,value:1},
+      // Article → Control
+      {source:10,target:17,value:1},{source:11,target:18,value:1},{source:12,target:19,value:1},{source:13,target:20,value:1},{source:14,target:21,value:1},{source:15,target:22,value:1},{source:16,target:23,value:1},
+      // Control → Evidence
+      {source:17,target:24,value:1},{source:18,target:25,value:1},{source:19,target:26,value:1},{source:20,target:27,value:1},{source:21,target:28,value:1},{source:22,target:29,value:1},{source:23,target:30,value:1}
+    ];
+
+    const sankey = d3.sankey()
+      .nodeId((d,i) => i)
+      .nodeWidth(16)
+      .nodePadding(10)
+      .extent([[margin.left, margin.top],[width-margin.right, height-margin.bottom]]);
+
+    const {nodes: sNodes, links: sLinks} = sankey({
+      nodes: nodes.map((d,i) => ({...d, index:i})),
+      links: links.map(d => ({...d}))
+    });
+
+    const colors = ["#2A6496","#3D8B6E","#E6A817","#6B7B8D","#50617D"];
+    const getColor = (d) => {
+      if (d.x0 < width*0.2) return colors[0];
+      if (d.x0 < width*0.4) return colors[1];
+      if (d.x0 < width*0.6) return colors[2];
+      if (d.x0 < width*0.8) return colors[3];
+      return colors[4];
+    };
+
+    // Links with animation
+    const linkG = svg.append("g").selectAll("path").data(sLinks).join("path")
+      .attr("d", d3.sankeyLinkHorizontal()).attr("class","sankey-link")
+      .attr("stroke", d => getColor(d.source)).attr("stroke-width", d => Math.max(1, d.width))
+      .attr("stroke-dasharray", function() { return this.getTotalLength(); })
+      .attr("stroke-dashoffset", function() { return this.getTotalLength(); });
+    linkG.transition().duration(1500).attr("stroke-dashoffset", 0);
+
+    // Nodes
+    const nodeG = svg.append("g").selectAll("g").data(sNodes).join("g").attr("class","sankey-node");
+    nodeG.append("rect").attr("x",d=>d.x0).attr("y",d=>d.y0).attr("height",d=>d.y1-d.y0).attr("width",d=>d.x1-d.x0)
+      .attr("fill",d=>getColor(d)).attr("rx",2);
+    nodeG.append("text").attr("x",d=>d.x0<width/2?d.x1+6:d.x0-6).attr("y",d=>(d.y1+d.y0)/2)
+      .attr("dy","0.35em").attr("text-anchor",d=>d.x0<width/2?"start":"end")
+      .text(d=>d.name).attr("fill","var(--text2)").attr("font-size",10);
+
+  }, [ready]);
+
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:4}}>Regulatory Hierarchy — 5-Ebenen-Ansicht</h2>
+      <p style={{fontSize:13,color:"var(--text3)",marginBottom:16}}>Framework → Kapitel → Artikel → Control → Evidence</p>
+      <div className="card" style={{padding:0,overflow:"hidden"}}>
+        <div className="sankey-container">
+          <svg ref={svgRef} style={{width:"100%",height:400}}/>
+        </div>
+      </div>
+      <div style={{display:"flex",gap:12,marginTop:12,flexWrap:"wrap"}}>
+        {[["Framework","#2A6496"],["Kapitel","#3D8B6E"],["Artikel","#E6A817"],["Control","#6B7B8D"],["Evidence","#50617D"]].map(([l,c]) => (
+          <div key={l} style={{display:"flex",alignItems:"center",gap:6,fontSize:11,color:"var(--text3)"}}>
+            <div style={{width:12,height:12,borderRadius:2,background:c}}/> {l}
+          </div>
+        ))}
+      </div>
+      <div className="posthoc-hint">🔗 Crosswalk: Identische Anforderungen über Frameworks hinweg werden automatisch verknüpft</div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* EVIDENCE GRAPH (D3 Force)                   */
+/* ═══════════════════════════════════════════ */
+function EvidenceGraph() {
+  const svgRef = useRef();
+  const [selectedNode, setSelectedNode] = useState(null);
+  const [connectedIds, setConnectedIds] = useState([]);
+  const [ready, setReady] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
+  useEffect(() => { const t = setTimeout(() => setReady(true), 50); return () => clearTimeout(t); }, []);
+
+  const GRAPH_NODES = [
+    {id:"KreditScore-LLM",type:"model",group:0,desc:"Hochrisiko-KI zur Kreditbewertung, EU AI Act Art. 6 Annex III"},
+    {id:"AML-Detector",type:"model",group:0,desc:"Anti-Money-Laundering Modell, Transaktionsüberwachung"},
+    {id:"EU AI Act",type:"regulation",group:1,desc:"Verordnung (EU) 2024/1689 — Europas KI-Regulierung"},
+    {id:"Art. 9",type:"regulation",group:1,desc:"Risikomanagement-System für Hochrisiko-KI"},
+    {id:"Art. 11",type:"regulation",group:1,desc:"Technische Dokumentation — Modellkarten"},
+    {id:"Art. 14",type:"regulation",group:1,desc:"Menschliche Aufsicht — Human Oversight"},
+    {id:"risk_mgmt_policy",type:"policy",group:2,desc:"OPA/Rego Policy: agp.compliance.risk_management"},
+    {id:"bias_threshold",type:"policy",group:2,desc:"OPA/Rego Policy: agp.bias.max_disparity < 0.10"},
+    {id:"risk_assess.pdf",type:"evidence",group:3,desc:"Risikobewertung gemäß Art. 9, generiert am 20.03.2026"},
+    {id:"model_card.md",type:"evidence",group:3,desc:"Model Card mit Leistungskennzahlen und Fairness-Metriken"},
+    {id:"oversight.pdf",type:"evidence",group:3,desc:"Human-Oversight-Protokoll, letzte Prüfung 18.03.2026"},
+    {id:"training_data.json",type:"evidence",group:3,desc:"Trainings-Datenmanifest mit Herkunft und Qualitätsmetriken"},
+    {id:"Compliance Check",type:"assessment",group:4,desc:"Automatisierte Konformitätsprüfung — Status: bestanden"},
+    {id:"Gate Result",type:"assessment",group:4,desc:"CI/CD Gate-Ergebnis: FAIL am 24.03 (bias_threshold verletzt)"},
+  ];
+
+  const GRAPH_LINKS = [
+    {source:"KreditScore-LLM",target:"EU AI Act",type:"SUBJECT_TO",label:"unterliegt"},
+    {source:"EU AI Act",target:"Art. 9",type:"CONTAINS",label:"enthält"},
+    {source:"EU AI Act",target:"Art. 11",type:"CONTAINS",label:"enthält"},
+    {source:"EU AI Act",target:"Art. 14",type:"CONTAINS",label:"enthält"},
+    {source:"Art. 9",target:"risk_mgmt_policy",type:"CONCRETIZES",label:"konkretisiert"},
+    {source:"Art. 11",target:"model_card.md",type:"IMPLEMENTS",label:"implementiert"},
+    {source:"Art. 14",target:"oversight.pdf",type:"IMPLEMENTS",label:"implementiert"},
+    {source:"risk_mgmt_policy",target:"risk_assess.pdf",type:"DERIVES_FROM",label:"leitet ab"},
+    {source:"risk_mgmt_policy",target:"bias_threshold",type:"DERIVES_FROM",label:"leitet ab"},
+    {source:"KreditScore-LLM",target:"Compliance Check",type:"ASSESSED_BY",label:"geprüft durch"},
+    {source:"KreditScore-LLM",target:"training_data.json",type:"TRAINED_ON",label:"trainiert mit"},
+    {source:"AML-Detector",target:"bias_threshold",type:"SUBJECT_TO",label:"unterliegt"},
+    {source:"AML-Detector",target:"Gate Result",type:"ASSESSED_BY",label:"geprüft durch"},
+    {source:"Compliance Check",target:"risk_assess.pdf",type:"PRODUCES",label:"erzeugt"},
+    {source:"AML-Detector",target:"EU AI Act",type:"SUBJECT_TO",label:"unterliegt"},
+  ];
+
+  useEffect(() => {
+    if (!svgRef.current || !ready) return;
+    const svg = d3.select(svgRef.current);
+    svg.selectAll("*").remove();
+    const width = svgRef.current.clientWidth || svgRef.current.parentElement?.clientWidth || 700;
+    const height = 520;
+
+    const nodes = GRAPH_NODES.map(d => ({...d}));
+    const links = GRAPH_LINKS.map(d => ({...d}));
+
+    const colors = {model:"#2A6496",regulation:"#E6A817",policy:"#3D8B6E",evidence:"#9C27B0",assessment:"#8D99AE"};
+    const radius = {model:18,regulation:14,policy:13,evidence:11,assessment:11};
+
+    const defs = svg.append("defs");
+    Object.entries(colors).forEach(([type, color]) => {
+      defs.append("marker").attr("id","arrow-"+type).attr("viewBox","0 -5 10 10").attr("refX",25)
+        .attr("refY",0).attr("markerWidth",6).attr("markerHeight",6).attr("orient","auto")
+        .append("path").attr("d","M0,-5L10,0L0,5").attr("fill",color).attr("opacity",.6);
+    });
+
+    const simulation = d3.forceSimulation(nodes)
+      .force("link", d3.forceLink(links).id(d=>d.id).distance(100))
+      .force("charge", d3.forceManyBody().strength(-350))
+      .force("center", d3.forceCenter(width/2, height/2))
+      .force("collision", d3.forceCollide().radius(30));
+
+    const linkG = svg.append("g");
+    const link = linkG.selectAll("line").data(links).join("line")
+      .attr("stroke", d => colors[nodes.find(n=>n.id===(d.source.id||d.source))?.type] || "#555")
+      .attr("stroke-width", 2).attr("stroke-opacity", .4)
+      .attr("stroke-dasharray","6,4")
+      .attr("marker-end", d => "url(#arrow-" + (nodes.find(n=>n.id===(d.target.id||d.target))?.type||"model") + ")")
+      .classed("graph-link-animated", true);
+
+    const linkLabel = svg.append("g").selectAll("text").data(links).join("text")
+      .text(d => d.label).attr("font-size",9).attr("fill","var(--text3)").attr("text-anchor","middle").attr("opacity",.6);
+
+    const nodeG = svg.append("g");
+    const node = nodeG.selectAll("g").data(nodes).join("g").attr("class","graph-node").style("cursor","pointer")
+      .call(d3.drag().on("start",(e,d)=>{if(!e.active)simulation.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y})
+        .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y}).on("end",(e,d)=>{if(!e.active)simulation.alphaTarget(0);d.fx=null;d.fy=null}));
+
+    node.append("circle").attr("r",d=>radius[d.type]+4).attr("fill","none").attr("stroke","none").attr("class","glow-ring");
+    node.append("circle").attr("r",d=>radius[d.type]).attr("fill",d=>colors[d.type]).attr("stroke","rgba(255,255,255,.25)").attr("stroke-width",2);
+    node.append("text").text(d=>d.id).attr("dx",d=>radius[d.type]+6).attr("dy",4).attr("fill","var(--text2)").attr("font-size",11).attr("font-weight",500);
+
+    node.on("mouseover", function() {
+      d3.select(this).select(".glow-ring").attr("stroke",d=>colors[d.type]).attr("stroke-width",2).attr("stroke-opacity",.5);
+    }).on("mouseout", function() {
+      d3.select(this).select(".glow-ring").attr("stroke","none");
+    });
+
+    node.on("click", (e, d) => {
+      setSelectedNode(d);
+      const connected = links.filter(l => (l.source.id||l.source)===d.id || (l.target.id||l.target)===d.id)
+        .flatMap(l => [(l.source.id||l.source),(l.target.id||l.target)]);
+      setConnectedIds([...new Set([d.id, ...connected])]);
+      node.selectAll("circle").attr("stroke-opacity",.2);
+      node.filter(n => [...new Set([d.id,...connected])].includes(n.id))
+        .selectAll("circle").attr("stroke","#fff").attr("stroke-width",3).attr("stroke-opacity",1);
+      link.attr("stroke-opacity", l => connected.includes(l.source.id||l.source) || connected.includes(l.target.id||l.target) ? .8 : .1);
+    });
+
+    simulation.on("tick", () => {
+      link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+      linkLabel.attr("x",d=>(d.source.x+d.target.x)/2).attr("y",d=>(d.source.y+d.target.y)/2 - 6);
+      node.attr("transform",d=>`translate(${d.x},${d.y})`);
+    });
+    return () => simulation.stop();
+  }, [ready]);
+
+  const nodeDetail = selectedNode ? GRAPH_NODES.find(n => n.id === selectedNode.id) : null;
+  const nodeLinks = selectedNode ? GRAPH_LINKS.filter(l => l.source === selectedNode.id || l.target === selectedNode.id ||
+    (typeof l.source === "object" && l.source.id === selectedNode.id) || (typeof l.target === "object" && l.target.id === selectedNode.id)) : [];
+
+  const useCases = [
+    {icon:"🔍",title:"Traceability",desc:"Verfolgen Sie den Pfad von KI-Modell → Regulierung → Policy → Evidence lückenlos."},
+    {icon:"💥",title:"Impact-Analyse",desc:"Klicken Sie auf einen Artikel: Welche Modelle und Policies sind betroffen?"},
+    {icon:"✅",title:"Audit-Readiness",desc:"Prüfen Sie, ob alle Evidence-Dokumente für jeden Artikel vorhanden sind."},
+    {icon:"⚠️",title:"Gap-Analyse",desc:"Finden Sie fehlende Verknüpfungen: Artikel ohne Evidence = Compliance-Lücke."},
+    {icon:"🌐",title:"Cross-Regulation",desc:"Visualisieren Sie Überschneidungen zwischen EU AI Act, DSGVO und ISO 42001."},
+  ];
+
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:8}}>Evidence Graph</h2>
+      {showBanner && <div className="info-banner">
+        <span className="banner-icon">💡</span>
+        <div><strong>Was ist der Evidence Graph?</strong> Er visualisiert die vollständige Governance-Kette: Von KI-Modellen über regulatorische Anforderungen und Policies bis hin zu konkreten Evidence-Dokumenten. Klicken Sie auf einen Knoten, um alle Verbindungen hervorzuheben und Details im rechten Panel zu sehen. Ziehen Sie Knoten, um die Ansicht anzupassen.</div>
+        <span className="banner-close" onClick={() => setShowBanner(false)}>✕</span>
+      </div>}
+      <div className="graph-container">
+        <svg ref={svgRef} className="graph-svg"/>
+        <div className="graph-detail" style={{minWidth:260}}>
+          {nodeDetail ? (
+            <div>
+              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:12}}>
+                <div style={{width:14,height:14,borderRadius:"50%",background:{model:"#2A6496",regulation:"#E6A817",policy:"#3D8B6E",evidence:"#9C27B0",assessment:"#8D99AE"}[nodeDetail.type]}}/>
+                <h3 style={{fontSize:14,color:"var(--text1)"}}>{nodeDetail.id}</h3>
+              </div>
+              <span className="badge badge-blue" style={{marginBottom:12,display:"inline-block"}}>{nodeDetail.type}</span>
+              <p style={{fontSize:12,color:"var(--text2)",lineHeight:1.5,marginBottom:16}}>{nodeDetail.desc}</p>
+              <div style={{fontSize:11,color:"var(--text3)",borderTop:"1px solid rgba(255,255,255,.06)",paddingTop:12}}>
+                <p style={{fontWeight:700,marginBottom:8}}>Verbindungen ({nodeLinks.length}):</p>
+                {nodeLinks.slice(0,6).map((l,i) => {
+                  const src = typeof l.source === "object" ? l.source.id : l.source;
+                  const tgt = typeof l.target === "object" ? l.target.id : l.target;
+                  const other = src === selectedNode.id ? tgt : src;
+                  return <div key={i} style={{padding:"4px 0",borderBottom:"1px solid rgba(255,255,255,.03)"}}><span style={{color:"var(--accent)"}}>{l.label}</span> → {other}</div>;
+                })}
+              </div>
+            </div>
+          ) : (
+            <div style={{fontSize:12,color:"var(--text3)",textAlign:"center",paddingTop:40}}>
+              <p style={{fontSize:32,marginBottom:12}}>🕸️</p>
+              <p style={{fontWeight:600,marginBottom:8}}>Knoten anklicken</p>
+              <p>Wählen Sie einen Knoten im Graph, um Details und alle Verbindungen anzuzeigen.</p>
+            </div>
+          )}
+        </div>
+      </div>
+      <div style={{display:"flex",gap:16,marginTop:12,flexWrap:"wrap",alignItems:"center"}}>
+        {[["Modell","#2A6496"],["Regulatorik","#E6A817"],["Policy","#3D8B6E"],["Evidence","#9C27B0"],["Assessment","#8D99AE"]].map(([l,c]) => (
+          <div key={l} style={{display:"flex",alignItems:"center",gap:6,fontSize:11,color:"var(--text3)"}}>
+            <div style={{width:10,height:10,borderRadius:"50%",background:c}}/> {l}
+          </div>
+        ))}
+        <span style={{fontSize:10,color:"var(--text3)",marginLeft:"auto"}}>→ = animierte Kante | Klick = Highlight-Netzwerk</span>
+      </div>
+      <div style={{marginTop:20}}>
+        <h3 style={{fontSize:14,color:"var(--text1)",marginBottom:8}}>Was kann ich mit dem Evidence Graph tun?</h3>
+        <div className="usecase-grid">
+          {useCases.map((uc,i) => (
+            <div key={i} className="usecase-card">
+              <h4>{uc.icon} {uc.title}</h4>
+              <p>{uc.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="posthoc-hint" style={{marginTop:16}}>🛡️ Der Evidence Graph visualisiert nachgelagert erhobene Governance-Daten — kein Eingriff in KI-Systeme (PostHoc-Prinzip).</div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* TECHNICAL DASHBOARD                         */
+/* ═══════════════════════════════════════════ */
+function TechDashboard() {
+  const {navigate, state} = useApp();
+  const persona = PERSONAS.find(p => p.id === state.persona);
+  return (
+    <div id="pipeline-status">
+      <h2 style={{fontSize:18,marginBottom:4}}>Technical Dashboard</h2>
+      <p style={{fontSize:13,color:"var(--text3)",marginBottom:20}}>Pipeline-Status & Policy-Gates — {persona?.name || "Sarah Kim"}</p>
+      <div className="info-banner"><span className="banner-icon">⚙️</span><div><strong>Technical Dashboard:</strong> Echtzeit-Übersicht der CI/CD Policy-Gates. Jedes KI-Deployment durchläuft automatisierte OPA/Rego-Prüfungen (Bias, Fairness, Transparenz). Gate-Pass-Rate, Policy-Violations und durchschnittliche Gate-Zeit auf einen Blick. Policy Explorer zeigt die aktiven Rego-Regeln.</div></div>
+      <div className="dash-grid dash-grid-4">
+        {[["Gate-Pass-Rate","97%","#66BB6A"],["Deployments (Q1)","23","#2A6496"],["Policy-Violations","2","#EF5350"],["Avg. Gate-Time","4.2s","#FFD54F"]].map(([l,v,c],i) => (
+          <div key={i} className="card" style={{textAlign:"center"}}>
+            <div style={{fontSize:28,fontWeight:700,color:c}}>{v}</div>
+            <div style={{fontSize:12,color:"var(--text3)"}}>{l}</div>
+          </div>
+        ))}
+      </div>
+      <div className="dash-grid dash-grid-2" style={{marginTop:20}}>
+        <div className="card" id="policy-btn" style={{cursor:"pointer"}} onClick={() => navigate("policy")}>
+          <div className="card-title">Policy Explorer</div>
+          <div style={{marginTop:12,fontFamily:"var(--mono)",fontSize:12,color:"var(--accent)",background:"var(--surface3)",padding:12,borderRadius:6,whiteSpace:"pre"}}>
+{"package agp.bias\n\ndefault allow = false\n\nallow {\n  input.disparity < 0.10\n  input.demographic_parity > 0.85\n}"}
+          </div>
+          <button className="export-btn" style={{marginTop:12}}>Alle Policies →</button>
+        </div>
+        <div className="card">
+          <div className="card-title">Letzte Gate-Ergebnisse</div>
+          {[["AML-Detector v1.9","FAIL","agp.bias.max_disparity","#EF5350"],
+            ["Fraud-Detection v4.0","PASS","—","#66BB6A"],
+            ["KreditScore-LLM v2.3","PASS","—","#66BB6A"],
+            ["Kunden-Chatbot v3.1","WARN","agp.transparency","#FFD54F"]
+          ].map(([m,r,p,c],i) => (
+            <div key={i} style={{display:"flex",alignItems:"center",gap:8,padding:"8px 0",borderBottom:"1px solid rgba(255,255,255,.04)",fontSize:13}}>
+              <span style={{fontWeight:600,color:c,width:40}}>{r}</span>
+              <span style={{color:"var(--text2)",flex:1}}>{m}</span>
+              <span style={{fontSize:11,color:"var(--text3)"}}>{p}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="posthoc-hint">🛡️ AGP-Gates prüfen nachgelagert — kein Eingriff in laufende CI/CD-Pipelines (PostHoc-Prinzip)</div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* AUDIT DASHBOARD                             */
+/* ═══════════════════════════════════════════ */
+function AuditDashboard() {
+  const {state} = useApp();
+  const persona = PERSONAS.find(p => p.id === state.persona);
+  return (
+    <div id="audit-overview">
+      <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:20}}>
+        <h2 style={{fontSize:18}}>{persona?.name || "Audit-Dashboard"} — Audit-Dashboard</h2>
+        <span className="badge badge-steel" style={{fontSize:12,padding:"6px 14px"}}>🔒 Prüfer-Zugang (Read-Only)</span>
+      </div>
+      <div className="info-banner"><span className="banner-icon">🔍</span><div><strong>Audit Dashboard:</strong> Read-Only-Zugang für externe Prüfer (BaFin, Wirtschaftsprüfer). Evidence-Completeness zeigt den Dokumentationsgrad je Modell. Exportieren Sie Prüfungsberichte (PDF) oder komplette Evidence-Pakete (ZIP) für die Jahresprüfung.</div></div>
+      <div className="dash-grid dash-grid-3">
+        {[["Modelle geprüft","12","#2A6496"],["Evidence-Completeness","78%","#E6A817"],["Offene Findings","3","#EF5350"]].map(([l,v,c],i) => (
+          <div key={i} className="card" style={{textAlign:"center"}}>
+            <div style={{fontSize:28,fontWeight:700,color:c}}>{v}</div>
+            <div style={{fontSize:12,color:"var(--text3)"}}>{l}</div>
+          </div>
+        ))}
+      </div>
+      <div className="card" style={{marginTop:20}}>
+        <div className="card-title" style={{marginBottom:12}}>Evidence-Completeness je Modell<span className="info-tip"><span className="tip-icon">i</span><span className="tip-text">Prozentsatz der erforderlichen Governance-Dokumente (Model Cards, Risk Assessments, Oversight-Protokolle) pro KI-Modell. Ziel: 100% für Audit-Readiness.</span></span></div>
+        {MODELS.slice(0,6).map((m,i) => (
+          <div key={i} style={{display:"flex",alignItems:"center",gap:12,padding:"6px 0",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+            <span style={{fontSize:13,color:"var(--text2)",width:180}}>{m.name}</span>
+            <div style={{flex:1}}><HBar value={50+i*8} color={(50+i*8) > 80 ? "#3D8B6E" : (50+i*8) > 60 ? "#E6A817" : "#EF5350"}/></div>
+            <span style={{fontSize:12,fontWeight:600,color:"var(--text2)",width:40,textAlign:"right"}}>{50+i*8}%</span>
+          </div>
+        ))}
+      </div>
+      <div style={{display:"flex",gap:12,marginTop:16}}>
+        <button className="export-btn">📄 Prüfungsbericht (PDF)</button>
+        <button className="export-btn">📊 Evidence-Paket (ZIP)</button>
+      </div>
+      <div className="posthoc-hint">🔒 Alle Daten sind Read-Only — kein Schreibzugriff für externe Prüfer</div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* ITSM INCIDENTS                              */
+/* ═══════════════════════════════════════════ */
+function ItsmIncidents() {
+  const [view, setView] = useState("table");
+  const [showBanner, setShowBanner] = useState(true);
+  const incidents = [
+    {id:"INC0012345",sev:1,cat:"Hallucination",title:"Halluzinierte Kreditwürdigkeitsbewertung",time:"1.4h",status:"Resolved",pir:true,model:"KreditScore-LLM",date:"24.03.2026",owner:"S. Kim"},
+    {id:"INC0012789",sev:2,cat:"Bias",title:"Disparate Impact bei Altersgruppe 55+",time:"18.3h",status:"Resolved",pir:true,model:"AML-Detector",date:"22.03.2026",owner:"T. Weber"},
+    {id:"INC0013456",sev:3,cat:"Drift",title:"GMS-Score Abfall um 18 Punkte",time:"30.0h",status:"Resolved",pir:false,model:"Fraud-Detection",date:"18.03.2026",owner:"S. Kim"},
+    {id:"INC0013890",sev:2,cat:"Transparency",title:"Fehlende Erklärbarkeit bei Kreditablehnung",time:"12.0h",status:"In Progress",pir:false,model:"KreditScore-LLM",date:"24.03.2026",owner:"T. Weber"},
+    {id:"INC0014001",sev:3,cat:"Data Quality",title:"Veraltete Trainingsdaten (> 6 Monate)",time:"—",status:"Open",pir:false,model:"Churn-Predictor",date:"24.03.2026",owner:"S. Kim"},
+  ];
+  const kpis = [
+    {label:"Incidents Q1",value:"5",color:"var(--text1)",sub:"2 offen"},
+    {label:"MTTR",value:"15.4h",color:"#66BB6A",sub:"Ziel: < 24h"},
+    {label:"SLA-Compliance",value:"96%",color:"#66BB6A",sub:"4/5 im SLA"},
+    {label:"PIR abgeschlossen",value:"2/3",color:"#FFD54F",sub:"1 ausstehend"},
+  ];
+  const kanbanCols = [
+    {title:"Open",color:"#EF5350",items:incidents.filter(i=>i.status==="Open")},
+    {title:"In Progress",color:"#FFD54F",items:incidents.filter(i=>i.status==="In Progress")},
+    {title:"Resolved",color:"#66BB6A",items:incidents.filter(i=>i.status==="Resolved")},
+    {title:"Closed",color:"#8D99AE",items:[]},
+  ];
+  return (
+    <div>
+      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:8}}>
+        <div>
+          <h2 style={{fontSize:18,marginBottom:4}}>KI-Incident-Response — PostHoc-Evidenz</h2>
+          <p style={{fontSize:13,color:"var(--text3)"}}>ServiceNow-Integration (Read-Only)</p>
+        </div>
+        <div className="view-toggle">
+          <button className={view==="table"?"active":""} onClick={() => setView("table")}>📋 Tabelle</button>
+          <button className={view==="kanban"?"active":""} onClick={() => setView("kanban")}>📊 Kanban</button>
+        </div>
+      </div>
+      {showBanner && <div className="info-banner">
+        <span className="banner-icon">🚨</span>
+        <div><strong>ITSM-Integration:</strong> AGP liest KI-bezogene Incidents aus ServiceNow (Read-Only). Hier sehen Sie Severity, Mean-Time-to-Resolve (MTTR), SLA-Compliance und Post-Incident-Reviews (PIR). Wechseln Sie zwischen Tabellen- und Kanban-Ansicht.</div>
+        <span className="banner-close" onClick={() => setShowBanner(false)}>✕</span>
+      </div>}
+      <div className="dash-grid dash-grid-4" style={{marginBottom:20}}>
+        {kpis.map((k,i) => (
+          <div key={i} className="card" style={{textAlign:"center"}}>
+            <div style={{fontSize:28,fontWeight:700,color:k.color}}>{k.value}</div>
+            <div style={{fontSize:12,color:"var(--text3)"}}>{k.label}</div>
+            <div style={{fontSize:10,color:"var(--text3)",marginTop:4}}>{k.sub}</div>
+          </div>
+        ))}
+      </div>
+      {view === "table" ? (
+        <div className="card">
+          <div className="card-title" style={{marginBottom:12}}>Incident-Übersicht</div>
+          <div style={{overflowX:"auto"}}>
+            <table style={{width:"100%",fontSize:12,borderCollapse:"collapse"}}>
+              <thead><tr style={{borderBottom:"2px solid rgba(255,255,255,.08)"}}>
+                {["SEV","ID","Titel","Modell","Status","MTTR","PIR","Owner"].map(h => (
+                  <th key={h} style={{padding:"8px 6px",textAlign:"left",color:"var(--text3)",fontWeight:600,fontSize:10,textTransform:"uppercase"}}>{h}</th>
+                ))}
+              </tr></thead>
+              <tbody>
+                {incidents.map((inc,i) => (
+                  <tr key={i} style={{borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+                    <td style={{padding:"8px 6px"}}><span className={`badge ${inc.sev===1?"badge-red":inc.sev===2?"badge-orange":"badge-amber"}`}>SEV-{inc.sev}</span></td>
+                    <td style={{padding:"8px 6px",color:"var(--accent)"}}>{inc.id}</td>
+                    <td style={{padding:"8px 6px",color:"var(--text2)"}}>{inc.title}</td>
+                    <td style={{padding:"8px 6px",color:"var(--text3)"}}>{inc.model}</td>
+                    <td style={{padding:"8px 6px"}}><span className={`badge ${inc.status==="Resolved"?"badge-green":inc.status==="Open"?"badge-red":"badge-amber"}`}>{inc.status}</span></td>
+                    <td style={{padding:"8px 6px",color:"var(--text3)"}}>{inc.time}</td>
+                    <td style={{padding:"8px 6px",color:inc.pir?"#66BB6A":"#EF5350"}}>{inc.pir?"✅":"⚠️"}</td>
+                    <td style={{padding:"8px 6px",color:"var(--text3)"}}>{inc.owner}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ) : (
+        <div className="kanban-board">
+          {kanbanCols.map((col,ci) => (
+            <div key={ci} className="kanban-col">
+              <div className="kanban-col-header" style={{borderBottomColor:col.color,color:col.color}}>{col.title} ({col.items.length})</div>
+              {col.items.map((inc,ii) => (
+                <div key={ii} className="kanban-card" style={{borderLeftColor:col.color}}>
+                  <div className="k-title">{inc.id}</div>
+                  <div style={{fontSize:11,color:"var(--text2)",marginBottom:4}}>{inc.title}</div>
+                  <div className="k-meta">SEV-{inc.sev} • {inc.model} • {inc.owner}</div>
+                </div>
+              ))}
+              {col.items.length === 0 && <div style={{fontSize:11,color:"var(--text3)",textAlign:"center",paddingTop:40}}>Keine Incidents</div>}
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="posthoc-hint" style={{marginTop:16}}>🛡️ AGP liest Incident-Daten aus ITSM-Systemen — es erzeugt keine Incidents. PostHoc-Prinzip.</div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* GENERIC SCREENS                             */
+/* ═══════════════════════════════════════════ */
+function BoardReport() {
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:16}}>Board Report Generator</h2>
+      <div className="card" style={{border:"2px dashed var(--steel)",minHeight:400,padding:32}}>
+        <div style={{textAlign:"center",marginBottom:24}}>
+          <h3 style={{color:"var(--text1)"}}>AEGIRA Governance Report — Q1 2026</h3>
+          <p style={{color:"var(--text3)",fontSize:13}}>Meridian Bank AG</p>
+        </div>
+        <div className="dash-grid dash-grid-3" style={{marginBottom:20}}>
+          <div style={{textAlign:"center"}}><div style={{fontSize:32,fontWeight:700,color:"var(--accent)"}}>72</div><div style={{fontSize:11,color:"var(--text3)"}}>GMS Score</div></div>
+          <div style={{textAlign:"center"}}><div style={{fontSize:32,fontWeight:700,color:"#66BB6A"}}>12</div><div style={{fontSize:11,color:"var(--text3)"}}>KI-Modelle</div></div>
+          <div style={{textAlign:"center"}}><div style={{fontSize:32,fontWeight:700,color:"#EF5350"}}>3</div><div style={{fontSize:11,color:"var(--text3)"}}>Offene Findings</div></div>
+        </div>
+        <LineChart data={GMS_HISTORY} width={600} height={160}/>
+      </div>
+      <div style={{display:"flex",gap:12,marginTop:16}}>
+        <button className="export-btn" onClick={() => alert("✅ Board Report als PDF exportiert")}>📄 Export als PDF</button>
+        <button className="export-btn" onClick={() => alert("✅ Board Report als PPTX exportiert")}>📊 Export als PPTX</button>
+      </div>
+    </div>
+  );
+}
+
+function PolicyExplorer() {
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:16}}>Policy Explorer</h2>
+      <div className="dash-grid dash-grid-60-40">
+        <div className="card">
+          <div className="card-title" style={{marginBottom:12}}>agp.compliance.risk_classification.rego</div>
+          <pre style={{fontFamily:"var(--mono)",fontSize:12,color:"var(--accent)",background:"var(--surface3)",padding:16,borderRadius:6,overflowX:"auto",lineHeight:1.7}}>
+{"package agp.compliance\n\nimport future.keywords.in\n\ndefault risk_class = \"minimal\"\n\nrisk_class = \"prohibited\" {\n  input.purpose in prohibited_practices\n}\n\nrisk_class = \"high_risk_annex_i\" {\n  input.product_category in annex_i_categories\n  input.safety_component == true\n}\n\nrisk_class = \"high_risk_annex_iii\" {\n  input.domain in annex_iii_domains\n  not art6_3_exception\n}\n\nrisk_class = \"limited\" {\n  input.transparency_required == true\n}\n\nart6_3_exception {\n  input.narrow_procedural == true\n  input.human_override == true\n  input.no_profiling == true\n}"}
+          </pre>
+        </div>
+        <div>
+          <div className="card" style={{marginBottom:12}}>
+            <div className="card-title">Policy-Baum</div>
+            {["agp.compliance","agp.bias","agp.transparency","agp.incident_response","agp.gate"].map((p,i) => (
+              <div key={i} style={{padding:"8px 0",borderBottom:"1px solid rgba(255,255,255,.04)",fontSize:13,color:i===0?"var(--accent)":"var(--text2)"}}>
+                📄 {p}
+              </div>
+            ))}
+          </div>
+          <div className="card">
+            <div className="card-title">Test-Ergebnisse</div>
+            {[["risk_classification","5/5","#66BB6A"],["bias_threshold","3/3","#66BB6A"],["gate_policy","4/4","#66BB6A"],["transparency","2/3","#EF5350"]].map(([n,r,c],i) => (
+              <div key={i} style={{display:"flex",justifyContent:"space-between",padding:"6px 0",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+                <span style={{fontSize:12,color:"var(--text2)"}}>{n}</span>
+                <span style={{fontSize:12,fontWeight:600,color:c}}>{r}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GateHistory() {
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:16}}>Gate-Historie</h2>
+      <div className="card">
+        {[
+          {time:"24.03.2026 09:14",model:"AML-Detector v1.9",result:"FAIL",reason:"agp.bias.max_disparity (0.18 > 0.10)",color:"#EF5350"},
+          {time:"23.03.2026 16:32",model:"Fraud-Detection v4.0",result:"PASS",reason:"Alle Policies erfüllt",color:"#66BB6A"},
+          {time:"23.03.2026 11:45",model:"KreditScore-LLM v2.3",result:"PASS",reason:"Alle Policies erfüllt",color:"#66BB6A"},
+          {time:"22.03.2026 14:20",model:"Kunden-Chatbot v3.1",result:"WARN",reason:"agp.transparency.disclosure",color:"#FFD54F"},
+          {time:"21.03.2026 10:00",model:"Robo-Advisor v2.5",result:"PASS",reason:"Alle Policies erfüllt",color:"#66BB6A"},
+        ].map((g,i) => (
+          <div key={i} style={{display:"flex",alignItems:"center",gap:12,padding:"12px 0",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+            <span style={{fontSize:11,color:"var(--text3)",width:120}}>{g.time}</span>
+            <span style={{fontWeight:700,color:g.color,width:40,fontSize:13}}>{g.result}</span>
+            <span style={{fontSize:13,color:"var(--text2)",width:180}}>{g.model}</span>
+            <span style={{fontSize:12,color:"var(--text3)",flex:1}}>{g.reason}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function AuditTrail() {
+  const [filter, setFilter] = useState("all");
+  const [showBanner, setShowBanner] = useState(true);
+  const events = [
+    {time:"24.03.2026 09:23",user:"System",action:"GMS neu berechnet",detail:"Governance Maturity Score: 78 → 72 (−6 Punkte). Ursache: 2 offene Findings, Policy-Violation AML-Detector.",cat:"system",sev:"warning",color:"#FFD54F"},
+    {time:"24.03.2026 09:14",user:"CI/CD Gate",action:"Gate FAIL — AML-Detector v1.9",detail:"Policy agp.bias.max_disparity verletzt: 0.18 > 0.10. Deployment blockiert. PIR erforderlich.",cat:"gate",sev:"critical",color:"#EF5350"},
+    {time:"23.03.2026 16:32",user:"CI/CD Gate",action:"Gate PASS — Fraud-Detection v4.0",detail:"Alle 5 Policies erfüllt. Automatisches Deployment in Production freigegeben.",cat:"gate",sev:"ok",color:"#66BB6A"},
+    {time:"23.03.2026 14:00",user:"T. Weber",action:"Compliance Checker ausgeführt",detail:"KreditScore-LLM → Hochrisiko (Art. 6 Abs. 2, Annex III Nr. 5b). Dokumentation erforderlich.",cat:"compliance",sev:"info",color:"#2A6496"},
+    {time:"23.03.2026 11:30",user:"S. Kim",action:"Model Card aktualisiert",detail:"model_card.md für KreditScore-LLM v2.3: Fairness-Metriken hinzugefügt.",cat:"evidence",sev:"ok",color:"#66BB6A"},
+    {time:"22.03.2026 16:45",user:"System",action:"Evidence-Lücke erkannt",detail:"Art. 14 (Human Oversight): oversight.pdf für AML-Detector fehlt. Audit-Readiness: 78% → 71%.",cat:"system",sev:"warning",color:"#FFD54F"},
+    {time:"22.03.2026 11:15",user:"E. Richter",action:"Board Report generiert",detail:"Q1 2026 Governance Report exportiert (PDF). Verteiler: Vorstand, Compliance, Revision.",cat:"report",sev:"info",color:"#2A6496"},
+    {time:"21.03.2026 14:20",user:"CI/CD Gate",action:"Gate WARN — Kunden-Chatbot v3.1",detail:"Policy agp.transparency.disclosure: Schwellwert knapp erfüllt (Score 0.82, Minimum 0.80).",cat:"gate",sev:"warning",color:"#FFD54F"},
+    {time:"21.03.2026 09:00",user:"T. Weber",action:"Neue Policy deployed",detail:"agp.bias v2.1: max_disparity Schwellwert von 0.12 auf 0.10 verschärft.",cat:"compliance",sev:"info",color:"#2A6496"},
+    {time:"20.03.2026 10:30",user:"System",action:"Modell registriert",detail:"NLP-Summarizer v1.0 im AI-Register erfasst. Vorklassifizierung: Minimal Risk.",cat:"system",sev:"ok",color:"#66BB6A"},
+    {time:"19.03.2026 15:00",user:"M. Scholz",action:"Audit-Prüfung abgeschlossen",detail:"Jahresprüfung 2025 für KreditScore-LLM: 3 Findings, 1 kritisch (Bias-Monitoring).",cat:"audit",sev:"critical",color:"#EF5350"},
+    {time:"18.03.2026 09:15",user:"System",action:"Drift-Alert",detail:"Fraud-Detection v3.9: Performance-Drift erkannt (AUC: 0.94 → 0.87). Retraining empfohlen.",cat:"system",sev:"warning",color:"#FFD54F"},
+  ];
+  const cats = [{id:"all",label:"Alle"},{id:"gate",label:"Gate"},{id:"compliance",label:"Compliance"},{id:"system",label:"System"},{id:"evidence",label:"Evidence"},{id:"audit",label:"Audit"},{id:"report",label:"Report"}];
+  const filtered = filter === "all" ? events : events.filter(e => e.cat === filter);
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:8}}>Audit Trail</h2>
+      {showBanner && <div className="info-banner">
+        <span className="banner-icon">📋</span>
+        <div><strong>Der Audit Trail</strong> protokolliert lückenlos jede Governance-relevante Aktion: Gate-Entscheidungen, Policy-Änderungen, Compliance-Prüfungen und System-Events. Jeder Eintrag ist unveränderbar und mit Zeitstempel, Akteur und Kontext versehen. Nutzen Sie die Filter, um gezielt nach Event-Typen zu suchen.</div>
+        <span className="banner-close" onClick={() => setShowBanner(false)}>✕</span>
+      </div>}
+      <div className="timeline-filter">
+        {cats.map(c => <button key={c.id} className={filter===c.id?"active":""} onClick={() => setFilter(c.id)}>{c.label}</button>)}
+      </div>
+      <div style={{padding:"4px 0 4px 8px"}}>
+        {filtered.map((e,i) => (
+          <div key={i} className="timeline-item">
+            <div className="timeline-dot" style={{background:e.color}}/>
+            <div className="timeline-date">{e.time} — {e.user}</div>
+            <div className="timeline-content">
+              <h4>{e.action}</h4>
+              <p>{e.detail}</p>
+              <div style={{display:"flex",gap:6,marginTop:6}}>
+                <span className={`badge ${e.sev==="critical"?"badge-red":e.sev==="warning"?"badge-amber":e.sev==="ok"?"badge-green":"badge-blue"}`} style={{fontSize:10}}>{e.cat}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="posthoc-hint">🛡️ Alle Audit-Einträge werden nachgelagert aus CI/CD, ITSM und Compliance-Systemen aggregiert (PostHoc-Prinzip).</div>
+    </div>
+  );
+}
+
+function AuditExport() {
+  return (
+    <div>
+      <h2 style={{fontSize:18,marginBottom:16}}>Audit-Export</h2>
+      <div className="card">
+        <div className="card-title" style={{marginBottom:16}}>Arbeitspapier-Generator</div>
+        <div style={{display:"grid",gap:12}}>
+          {["Modell-Übersicht & Risikoklassen","Compliance-Status je Modell","Evidence-Completeness Matrix",
+            "Incident-Response-Protokolle","GMS-Verlauf & Trend-Analyse","Policy-Violation-Log"
+          ].map((item,i) => (
+            <label key={i} style={{display:"flex",alignItems:"center",gap:10,fontSize:13,color:"var(--text2)",cursor:"pointer"}}>
+              <input type="checkbox" defaultChecked style={{accentColor:"var(--accent)"}}/>
+              {item}
+            </label>
+          ))}
+        </div>
+        <div style={{display:"flex",gap:12,marginTop:20}}>
+          <button className="export-btn" onClick={() => alert("✅ Arbeitspapier als PDF erstellt")}>📄 Export als PDF</button>
+          <button className="export-btn" onClick={() => alert("✅ Evidence-Paket als Excel erstellt")}>📊 Export als Excel</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* MAIN ROUTER                                 */
+/* ═══════════════════════════════════════════ */
+function MainContent() {
+  const {state} = useApp();
+  const screens = {
+    dashboard: {
+      executive: ExecDashboard,
+      compliance: ComplianceDashboard,
+      technical: TechDashboard,
+      auditor: AuditDashboard,
+    },
+    gms: {default: GmsDetail},
+    registry: {default: AIRegistry},
+    evidence: {default: EvidenceGraph},
+    report: {default: BoardReport},
+    checker: {default: ComplianceChecker},
+    hierarchy: {default: RegulatoryHierarchy},
+    audit: {default: AuditTrail},
+    itsm: {default: ItsmIncidents},
+    policy: {default: PolicyExplorer},
+    gates: {default: GateHistory},
+    export: {default: AuditExport},
+  };
+
+  const screenDef = screens[state.screen];
+  if (!screenDef) return <ExecDashboard/>;
+  const Component = screenDef[state.persona] || screenDef.default || ExecDashboard;
+  return <div className="content" key={state.screen}><Component/></div>;
+}
+
+/* ═══════════════════════════════════════════ */
+/* APP                                         */
+/* ═══════════════════════════════════════════ */
+function App() {
+  const {state} = useApp();
+
+  if (!state.persona) return <LoginScreen/>;
+
+  return (
+    <div className="app-layout">
+      <Sidebar/>
+      <div className="main-area">
+        <TopBar/>
+        <MainContent/>
+      </div>
+      <CoPilotPanel/>
+      <ToastContainer/>
+      <GuidedTour/>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════ */
+/* RENDER                                      */
+/* ═══════════════════════════════════════════ */
+ReactDOM.render(
+  <AppProvider><App/></AppProvider>,
+  document.getElementById("root")
+);
+</script>
 </body>
 </html>
